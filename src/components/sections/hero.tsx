@@ -46,7 +46,7 @@ export function Hero() {
                     {t("role")}
                 </h2>
 
-                <div className="text-6xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter">
+                <div className="text-5xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter">
                     <TextReveal>
                         {t("title_part1")}
                     </TextReveal>
