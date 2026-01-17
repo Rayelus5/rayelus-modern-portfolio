@@ -124,36 +124,36 @@
                 "role": "Socia de TCG Live Arena",
                 "text": "Creó un prototipo en cuestión de días y supo plasmar a la perfección la idea que teníamos en mente. Además de diseñar interfaces y animaciones inspiradas en un diseño Liquid Glass."
             }
-        },
-        "About": {
-            "title_part1": "Software",
-            "title_part2": "con Criterio",
-            "bio_p1": "Empecé a programar a los 14 años y desde entonces no he parado de construir, aprender, fallar y sobre todo de mejorar. Creo <strong class='text-foreground'>productos digitales sólidos</strong>, donde conviven tanto la <em class='italic text-brand-primary'>ingeniería</em> como el <em class='italic text-brand-primary'>diseño</em>.",
-            "bio_p2": "Trabajo con clientes que confían en mi criterio y en la calidad de mis resultados.",
-            "stats": {
-                "base_label": "Base",
-                "base_value": "Global / Remoto",
-                "exp_label": "Experiencia",
-                "exp_value": "+5 Años",
-                "stack_title": "STACK TECNOLÓGICO Y HABILIDADES",
-                "dev_since": "DESARROLLADOR DESDE 2020"
-            }
-        },
-        "Projects_Extras": {
-            "search_placeholder": "Buscar proyectos...",
-            "filter_all": "Todos",
-            "page_jump": "Ir a",
-            "page_info": "PÁGINA",
-            "no_results_title": "No hay proyectos",
-            "clear_filters": "Limpiar Filtros"
-        },
-        "Contact_Extras": {
-            "location_value": "Sevilla, España",
-            "placeholders": {
-                "name": "Tu nombre",
-                "email": "ejemplo@email.com",
-                "message": "Tengo una idea para..."
-            }
+        }
+    },
+    "About": {
+        "title_part1": "Software",
+        "title_part2": "con Criterio",
+        "bio_p1": "Empecé a programar a los 14 años y desde entonces no he parado de construir, aprender, fallar y sobre todo de mejorar. Creo <strong class='text-foreground'>productos digitales sólidos</strong>, donde conviven tanto la <em class='italic text-brand-primary'>ingeniería</em> como el <em class='italic text-brand-primary'>diseño</em>.",
+        "bio_p2": "Trabajo con clientes que confían en mi criterio y en la calidad de mis resultados.",
+        "stats": {
+            "base_label": "Base",
+            "base_value": "Global / Remoto",
+            "exp_label": "Experiencia",
+            "exp_value": "+5 Años",
+            "stack_title": "STACK TECNOLÓGICO Y HABILIDADES",
+            "dev_since": "DESARROLLADOR DESDE 2020"
+        }
+    },
+    "Projects_Extras": {
+        "search_placeholder": "Buscar proyectos...",
+        "filter_all": "Todos",
+        "page_jump": "Ir a",
+        "page_info": "PÁGINA",
+        "no_results_title": "No hay proyectos",
+        "clear_filters": "Limpiar Filtros"
+    },
+    "Contact_Extras": {
+        "location_value": "Sevilla, España",
+        "placeholders": {
+            "name": "Tu nombre",
+            "email": "ejemplo@email.com",
+            "message": "Tengo una idea para..."
         }
     },
     "Thanks": {
