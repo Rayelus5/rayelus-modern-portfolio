@@ -1,0 +1,83 @@
+{
+    "Nav": {
+        "about": "About",
+        "projects": "Projects",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "Hero": {
+        "badge": "Available for new projects",
+        "role": "Designer & Frontend Developer",
+        "title_part1": "CRAFTING UNIQUE",
+        "title_part2": "DIGITAL EXPERIENCES",
+        "description": "Specializing in building high-impact, minimalist, and ultra-smooth interfaces. Elevating the standard of modern web development.",
+        "cta_primary": "View Projects",
+        "cta_secondary": "Let's Talk"
+    },
+    "Projects": {
+        "title": "Selected Projects",
+        "subtitle": "A selection of my latest works merging design and performance.",
+        "view_project": "View Project",
+        "items": {
+            "p1": {
+                "title": "EcoSphere AI",
+                "desc": "Environmental monitoring platform with real-time data visualization.",
+                "tag": "SaaS / AI"
+            },
+            "p2": {
+                "title": "Nexus OS",
+                "desc": "Web operating system concept focused on minimalist productivity.",
+                "tag": "Web App"
+            }
+        },
+        "cursorText": {
+            "p1": "Visit",
+            "p2": "Visit"
+        }
+    },
+    "Services": {
+        "title": "Services",
+        "subtitle": "Comprehensive digital solutions focused on aesthetics and performance.",
+        "list": {
+            "dev": {
+                "title": "Web Development",
+                "description": "Ultra-fast websites built with Next.js and React. Clean, scalable, and SEO-optimized code."
+            },
+            "design": {
+                "title": "UI/UX Design",
+                "description": "Intuitive and minimalist interfaces that prioritize user experience and brand identity."
+            },
+            "motion": {
+                "title": "Motion Graphics",
+                "description": "Smooth animations and micro-interactions that bring your product to life and retain users."
+            },
+            "branding": {
+                "title": "Digital Identity",
+                "description": "Creation of coherent visual ecosystems, from logos to complete style guides."
+            }
+        }
+    },
+    "Contact": {
+        "title": "Let's talk",
+        "subtitle": "Do you have an amazing idea? Let's make it real.",
+        "form": {
+            "name": "Your name",
+            "email": "Email",
+            "message": "Tell me about your project",
+            "send": "Send message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!"
+        },
+        "info": {
+            "email": "Email",
+            "social": "Social",
+            "location": "Address"
+        }
+    },
+    "Footer": {
+        "rights": "All rights reserved",
+        "cv": "Download CV",
+        "cv_loading": "Preparing PDF...",
+        "social": "Connect"
+    }
+}

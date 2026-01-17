@@ -1,0 +1,83 @@
+{
+    "Nav": {
+        "about": "Sobre mí",
+        "projects": "Proyectos",
+        "services": "Servicios",
+        "contact": "Contacto"
+    },
+    "Hero": {
+        "badge": "Disponible para nuevos proyectos",
+        "role": "Diseñador & Desarrollador Frontend",
+        "title_part1": "CREANDO EXPERIENCIAS",
+        "title_part2": "DIGITALES ÚNICAS",
+        "description": "Especializado en construir interfaces de alto impacto, minimalistas y ultra fluidas. Elevando el estándar del desarrollo web moderno.",
+        "cta_primary": "Ver proyectos",
+        "cta_secondary": "Hablemos"
+    },
+    "Projects": {
+        "title": "Proyectos Seleccionados",
+        "subtitle": "Una muestra de mis trabajos más recientes fusionando diseño y performance.",
+        "view_project": "Ver Proyecto",
+        "items": {
+            "p1": {
+                "title": "EcoSphere AI",
+                "desc": "Plataforma de monitoreo ambiental con visualización de datos en tiempo real.",
+                "tag": "SaaS / AI"
+            },
+            "p2": {
+                "title": "Nexus OS",
+                "desc": "Concepto de sistema operativo web enfocado en la productividad minimalista.",
+                "tag": "Web App"
+            }
+        },
+        "cursorText": {
+            "p1": "Ver",
+            "p2": "Ver"
+        }
+    },
+    "Services": {
+        "title": "Servicios",
+        "subtitle": "Soluciones digitales a problemas reales.",
+        "list": {
+            "dev": {
+                "title": "Desarrollo Web",
+                "description": "Sitios web ultra rápidos construidos con Next.js y React. Código limpio, escalable y optimizado para SEO."
+            },
+            "design": {
+                "title": "UI/UX Design",
+                "description": "Interfaces intuitivas y minimalistas que priorizan la experiencia del usuario y la identidad de marca."
+            },
+            "motion": {
+                "title": "Motion Graphics",
+                "description": "Animaciones fluidas y microinteracciones que dan vida a tu producto y retienen a los usuarios."
+            },
+            "branding": {
+                "title": "Identidad Digital",
+                "description": "Creación de ecosistemas visuales coherentes, desde logotipos hasta guías de estilo completas."
+            }
+        }
+    },
+    "Contact": {
+        "title": "Hablemos",
+        "subtitle": "¿Tienes una idea increíble? Hagámosla realidad.",
+        "form": {
+            "name": "Tu nombre",
+            "email": "Email",
+            "message": "Cuéntame sobre tu proyecto",
+            "send": "Enviar mensaje",
+            "sending": "Enviando...",
+            "success": "¡Mensaje enviado con éxito!"
+        },
+        "info": {
+            "email": "Email",
+            "social": "Redes",
+            "location": "Ubicación"
+        }
+    },
+    "Footer": {
+        "rights": "Todos los derechos reservados",
+        "cv": "Descargar CV",
+        "cv_loading": "Preparando PDF...",
+        "social": "Conectar"
+    }
+}
