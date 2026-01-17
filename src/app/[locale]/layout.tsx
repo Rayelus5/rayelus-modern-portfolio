@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans_JP, Noto_Sans_SC, Amiri } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from "@/components/layout/theme-provider";
@@ -11,8 +11,13 @@ import "@/app/globals.css";
 import { Footer } from "@/components/layout/footer";
 import { ClientLoader } from "@/components/layout/client-loader";
 
-const geistSans = Geist({ subsets: ["latin"], variable: "--font-sans" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const geistSans = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
+
+// Fonts for specific languages with unique variables
+const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], variable: "--font-ja" });
+const notoSansSC = Noto_Sans_SC({ subsets: ["latin"], variable: "--font-zh" });
+const amiri = Amiri({ subsets: ["arabic"], weight: ["400", "700"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
     title: "Rayelus | Creative Designer & Frontend Engineer",
@@ -29,13 +34,39 @@ export default async function LocaleLayout({
     const { locale } = await params;
     const messages = await getMessages();
 
+    // Determine main font variable
+    let mainFontVar = "--font-geist-sans";
+    let monoFontVar = "--font-geist-mono";
+
+    if (locale === 'ja') {
+        mainFontVar = "--font-ja";
+        monoFontVar = "--font-ja"; // Use Sans for mono slots to avoid tofu
+    } else if (locale === 'zh') {
+        mainFontVar = "--font-zh";
+        monoFontVar = "--font-zh";
+    } else if (locale === 'ar') {
+        mainFontVar = "--font-ar";
+        monoFontVar = "--font-ar";
+    }
+
     return (
-        <html lang={locale} suppressHydrationWarning>
-            <body className={cn(
-                "min-h-screen font-sans antialiased noise-bg",
-                geistSans.variable,
-                geistMono.variable
-            )}>
+        <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} suppressHydrationWarning>
+            <body
+                className={cn(
+                    "min-h-screen font-sans antialiased noise-bg",
+                    geistSans.variable,
+                    geistMono.variable,
+                    notoSansJP.variable,
+                    notoSansSC.variable,
+                    amiri.variable
+                )}
+                style={{
+                    // @ts-ignore
+                    "--font-sans": `var(${mainFontVar})`,
+                    // @ts-ignore
+                    "--font-mono": `var(${monoFontVar})`
+                }}
+            >
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider>
                         <ClientLoader>

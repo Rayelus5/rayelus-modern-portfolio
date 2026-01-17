@@ -160,5 +160,10 @@
         "title": "¡Mensaje Enviado!",
         "message": "Gracias por contactar conmigo. Te responderé lo antes posible.",
         "button": "Volver al Inicio"
+    },
+    "NotFound": {
+        "title": "404",
+        "description": "Página no encontrada. La URL que buscas no existe.",
+        "button": "Volver al Inicio"
     }
 }

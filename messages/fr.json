@@ -1,0 +1,169 @@
+{
+    "Nav": {
+        "about": "À propos",
+        "projects": "Projets",
+        "services": "Services",
+        "testimonials": "Avis",
+        "contact": "Contact"
+    },
+    "Hero": {
+        "badge": "Disponible pour de nouveaux projets",
+        "role": "Concepteur et Développeur Web",
+        "title_part1": "SOLUTIONS",
+        "title_part2": "NUMÉRIQUES CRÉATIVES",
+        "description": "Spécialisé dans la création d'interfaces à fort impact, minimalistes, accessibles et performantes. Création de solutions numériques pour des problèmes réels.",
+        "cta_primary": "Voir les projets",
+        "cta_secondary": "Discutons"
+    },
+    "Projects": {
+        "title": "Mes Projets",
+        "subtitle": "Une sélection de mes travaux les plus récents, alliant design et performance.",
+        "view_project": "Voir le projet",
+        "items": {
+            "p1": {
+                "title": "Pollnow",
+                "desc": "Plateforme pour créer, gérer et analyser des événements interactifs avec vote en temps réel.",
+                "tag": "SaaS / Web"
+            },
+            "p2": {
+                "title": "TCG Shop Finder",
+                "desc": "Plateforme pour localiser des boutiques de cartes à collectionner en Espagne. Recherche et filtres avancés.",
+                "tag": "SaaS / Web"
+            },
+            "p3": {
+                "title": "Arandor",
+                "desc": "Un jeu RPG classique en terminal développé en JavaScript pur. Plusieurs versions et une histoire complète.",
+                "tag": "Web / Jeu"
+            },
+            "p4": {
+                "title": "Chaotic Loom",
+                "desc": "Je collabore activement sur ce projet en tant que designer et développeur frontend.",
+                "tag": "Web / Design"
+            },
+            "p5": {
+                "title": "TCG Live Arena",
+                "desc": "Plateforme personnalisée pour organiser des tournois et des batailles en ligne pour le jeu de cartes Pokémon TCG Live.",
+                "tag": "SaaS / Web"
+            }
+        },
+        "cursorText": {
+            "p1": "Voir",
+            "p2": "Voir",
+            "p3": "Voir",
+            "p4": "Voir",
+            "p5": "Voir"
+        }
+    },
+    "Services": {
+        "title": "Services",
+        "subtitle": "Solutions numériques pour des problèmes réels.",
+        "list": {
+            "dev": {
+                "title": "Développement Web",
+                "description": "Sites web ultra-rapides construits avec Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, PostgreSQL. Code évolutif et optimisé."
+            },
+            "design": {
+                "title": "UI/UX Design",
+                "description": "Interfaces intuitives et minimalistes qui privilégient l'expérience utilisateur et l'identité de marque."
+            },
+            "motion": {
+                "title": "Motion Graphics",
+                "description": "Animations fluides et micro-interactions satisfaisantes qui donnent vie à votre produit."
+            },
+            "branding": {
+                "title": "Identité Numérique",
+                "description": "Création d'écosystèmes visuels cohérents, des logos aux guides de style complets."
+            }
+        }
+    },
+    "Contact": {
+        "title": "Discutons",
+        "subtitle": "Vous êtes une entreprise ou vous avez simplement une idée incroyable que vous aimeriez concrétiser ?",
+        "form": {
+            "name": "Votre nom",
+            "email": "Email",
+            "message": "Parlez-moi de votre projet",
+            "send": "Envoyer le message",
+            "sending": "Envoi en cours...",
+            "success": "Message envoyé avec succès !"
+        },
+        "info": {
+            "email": "Email",
+            "social": "Réseaux",
+            "location": "Localisation"
+        }
+    },
+    "Footer": {
+        "rights": "Tous droits réservés",
+        "cv": "Télécharger CV",
+        "cv_loading": "Préparation du PDF...",
+        "social": "Connecter"
+    },
+    "Testimonials": {
+        "title": "Avis de",
+        "title_highlight": "Clients",
+        "subtitle": "Je préfère laisser parler ceux qui ont déjà travaillé avec moi.",
+        "reviews": {
+            "r1": {
+                "name": "Pablo",
+                "role": "YouTuber chez El Rincón Crypto",
+                "text": "Travailler avec Rayelus a été une excellente expérience. Son travail sur l'image de marque et le design visuel a considérablement amélioré ma chaîne."
+            },
+            "r2": {
+                "name": "Restonic4",
+                "role": "Créateur de Chaotic Loom",
+                "text": "Son expertise en frontend et design se voit dans les interfaces rapides et bien pensées qu'il a créées pour mon projet."
+            },
+            "r3": {
+                "name": "David Carmona",
+                "role": "CEO de TCG Shop Finder",
+                "text": "Un grand ami et professionnel avec qui il est agréable de travailler. Ses compétences en développement web et surtout en design ont fait toute la différence."
+            },
+            "r4": {
+                "name": "Laura",
+                "role": "Partenaire chez TCG Live Arena",
+                "text": "Il a créé un prototype en quelques jours et a parfaitement saisi l'idée que nous avions en tête."
+            }
+        }
+    },
+    "About": {
+        "title_part1": "Logiciel",
+        "title_part2": "avec Sens",
+        "bio_p1": "J'ai commencé à programmer à 14 ans et depuis, je n'ai cessé de construire, d'apprendre et de m'améliorer. Je crée des <strong class='text-foreground'>produits numériques solides</strong>, où l'<em class='italic text-brand-primary'>ingénierie</em> et le <em class='italic text-brand-primary'>design</em> coexistent.",
+        "bio_p2": "Je travaille avec des clients qui font confiance à mon jugement et à la qualité de mes résultats.",
+        "stats": {
+            "base_label": "Base",
+            "base_value": "Global / Télétravail",
+            "exp_label": "Expérience",
+            "exp_value": "+5 Ans",
+            "stack_title": "STACK TECHNIQUE & COMPÉTENCES",
+            "dev_since": "DÉVELOPPEUR DEPUIS 2020"
+        }
+    },
+    "Projects_Extras": {
+        "search_placeholder": "Rechercher des projets...",
+        "filter_all": "Tous",
+        "page_jump": "Aller à",
+        "page_info": "PAGE",
+        "no_results_title": "Aucun projet trouvé",
+        "clear_filters": "Effacer les filtres"
+    },
+    "Contact_Extras": {
+        "location_value": "Séville, Espagne",
+        "placeholders": {
+            "name": "Votre nom",
+            "email": "exemple@email.com",
+            "message": "J'ai une idée pour..."
+        }
+    },
+    "Thanks": {
+        "title": "Message Envoyé !",
+        "message": "Merci de m'avoir contacté. Je vous répondrai dès que possible.",
+        "button": "Retour à l'accueil"
+    },
+    "NotFound": {
+        "title": "404",
+        "description": "Page non trouvée. L'URL que vous recherchez n'existe pas.",
+        "button": "Retour à l'accueil"
+    }
+}

@@ -1,0 +1,169 @@
+{
+    "Nav": {
+        "about": "私について",
+        "projects": "プロジェクト",
+        "services": "サービス",
+        "testimonials": "レビュー",
+        "contact": "お問い合わせ"
+    },
+    "Hero": {
+        "badge": "新しいプロジェクト募集中",
+        "role": "Webデザイナー & 開発者",
+        "title_part1": "創造的な",
+        "title_part2": "デジタル・ソリューション",
+        "description": "インパクトのある、ミニマリストでアクセシブルかつ高パフォーマンスなインターフェースの構築を専門としています。現実の問題に対するデジタルソリューションを創造します。",
+        "cta_primary": "プロジェクトを見る",
+        "cta_secondary": "話しましょう"
+    },
+    "Projects": {
+        "title": "マイ・プロジェクト",
+        "subtitle": "私の最新の作品の中から、デザインと開発のベストセレクション。",
+        "view_project": "プロジェクトを見る",
+        "items": {
+            "p1": {
+                "title": "Pollnow",
+                "desc": "リアルタイム投票によるインタラクティブイベントの作成、管理、分析プラットフォーム。",
+                "tag": "SaaS / Web"
+            },
+            "p2": {
+                "title": "TCG Shop Finder",
+                "desc": "スペイン全国のトレーディングカードショップを見つけるためのプラットフォーム。検索と高度なフィルター機能。",
+                "tag": "SaaS / Web"
+            },
+            "p3": {
+                "title": "Arandor",
+                "desc": "純粋なJavaScriptで開発された古典的なターミナルRPGゲーム。様々なバージョンと完全なストーリー。",
+                "tag": "Web / ゲーム"
+            },
+            "p4": {
+                "title": "Chaotic Loom",
+                "desc": "私はデザイナーおよびフロントエンド開発者としてこのプロジェクトに積極的に協力しています。",
+                "tag": "Web / デザイン"
+            },
+            "p5": {
+                "title": "TCG Live Arena",
+                "desc": "ポケモンTCGライブカードゲームのオンライン大会やバトルを主催するための独自プラットフォーム。",
+                "tag": "SaaS / Web"
+            }
+        },
+        "cursorText": {
+            "p1": "見る",
+            "p2": "見る",
+            "p3": "見る",
+            "p4": "見る",
+            "p5": "見る"
+        }
+    },
+    "Services": {
+        "title": "サービス",
+        "subtitle": "現実の問題に対するデジタルソリューション。",
+        "list": {
+            "dev": {
+                "title": "Web開発",
+                "description": "Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, PostgreSQL で構築された高速なWebサイト。スケーラブルで最適化されたコード。"
+            },
+            "design": {
+                "title": "UI/UX デザイン",
+                "description": "ユーザー体験とブランドアイデンティティを優先した、直感的でミニマルなインターフェース。"
+            },
+            "motion": {
+                "title": "モーショングラフィックス",
+                "description": "製品に命を吹き込む滑らかなアニメーションと心地よいマイクロインタラクション。"
+            },
+            "branding": {
+                "title": "デジタルアイデンティティ",
+                "description": "ロゴから完全なスタイルガイドまで、一貫したビジュアルエコシステムの構築。"
+            }
+        }
+    },
+    "Contact": {
+        "title": "話しましょう",
+        "subtitle": "企業の方、あるいは素晴らしいアイデアを実現したい個人の方ですか？",
+        "form": {
+            "name": "お名前",
+            "email": "メールアドレス",
+            "message": "プロジェクトについて教えてください",
+            "send": "メッセージを送信",
+            "sending": "送信中...",
+            "success": "メッセージが送信されました！"
+        },
+        "info": {
+            "email": "メール",
+            "social": "ソーシャル",
+            "location": "場所"
+        }
+    },
+    "Footer": {
+        "rights": "All rights reserved",
+        "cv": "CVをダウンロード",
+        "cv_loading": "PDFを準備中...",
+        "social": "つながる"
+    },
+    "Testimonials": {
+        "title": "お客様の",
+        "title_highlight": "声",
+        "subtitle": "私自身の言葉よりも、一緒に仕事をした人たちの言葉を信じています。",
+        "reviews": {
+            "r1": {
+                "name": "Pablo",
+                "role": "El Rincón Crypto YouTuber",
+                "text": "Rayelusとの仕事は素晴らしい経験でした。彼のブランディングとビジュアルデザインの仕事は、私のチャンネルを著しく向上させました。"
+            },
+            "r2": {
+                "name": "Restonic4",
+                "role": "Chaotic Loom クリエイター",
+                "text": "彼のフロントエンドとデザインの専門知識は、私のプロジェクトのために彼が作成した、高速でクリーン、かつ考え抜かれたインターフェースに表れています。"
+            },
+            "r3": {
+                "name": "David Carmona",
+                "role": "TCG Shop Finder CEO",
+                "text": "一緒に仕事をするのが楽しい素晴らしい友人でありプロフェッショナルです。Web開発、特にデザインにおける彼のスキルは、私たちのWebサイトに違いをもたらしました。"
+            },
+            "r4": {
+                "name": "Laura",
+                "role": "TCG Live Arena パートナー",
+                "text": "彼は数日でプロトタイプを作成し、私たちが心に描いていたアイデアを完璧に表現してくれました。"
+            }
+        }
+    },
+    "About": {
+        "title_part1": "意味のある",
+        "title_part2": "ソフトウェア",
+        "bio_p1": "14歳でプログラミングを始め、それ以来、構築、学習、失敗、そして何よりも改善を止めていません。<em class='italic text-brand-primary'>エンジニアリング</em>と<em class='italic text-brand-primary'>デザイン</em>が共存する、<strong class='text-foreground'>強固なデジタル製品</strong>を作成しています。",
+        "bio_p2": "私の判断と成果の質を信頼してくれるクライアントと仕事をしています。",
+        "stats": {
+            "base_label": "拠点",
+            "base_value": "グローバル / リモート",
+            "exp_label": "経験",
+            "exp_value": "+5 年",
+            "stack_title": "技術スタック & スキル",
+            "dev_since": "開発者歴 2020年〜"
+        }
+    },
+    "Projects_Extras": {
+        "search_placeholder": "プロジェクトを検索...",
+        "filter_all": "すべて",
+        "page_jump": "ページ移動",
+        "page_info": "ページ",
+        "no_results_title": "プロジェクトが見つかりません",
+        "clear_filters": "フィルターをクリア"
+    },
+    "Contact_Extras": {
+        "location_value": "セビリア, スペイン",
+        "placeholders": {
+            "name": "お名前",
+            "email": "example@email.com",
+            "message": "アイデアがあります..."
+        }
+    },
+    "Thanks": {
+        "title": "メッセージ送信完了！",
+        "message": "お問い合わせありがとうございます。できるだけ早く返信いたします。",
+        "button": "ホームに戻る"
+    },
+    "NotFound": {
+        "title": "404",
+        "description": "ページが見つかりません。お探しのURLは存在しません。",
+        "button": "ホームに戻る"
+    }
+}

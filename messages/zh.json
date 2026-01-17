@@ -1,0 +1,169 @@
+{
+    "Nav": {
+        "about": "关于",
+        "projects": "项目",
+        "services": "服务",
+        "testimonials": "评价",
+        "contact": "联系"
+    },
+    "Hero": {
+        "badge": "寻求新的合作机会",
+        "role": "网页设计师 & 开发者",
+        "title_part1": "创意",
+        "title_part2": "数字解决方案",
+        "description": "专注于构建高影响力、极简主义、无障碍且高性能的界面。为现实问题创造数字解决方案。",
+        "cta_primary": "查看项目",
+        "cta_secondary": "联系我"
+    },
+    "Projects": {
+        "title": "我的项目",
+        "subtitle": "我最近的作品展示，融合了设计与开发的精华。",
+        "view_project": "查看项目",
+        "items": {
+            "p1": {
+                "title": "Pollnow",
+                "desc": "用于创建、管理和分析实时投票互动活动的平台。",
+                "tag": "SaaS / Web"
+            },
+            "p2": {
+                "title": "TCG Shop Finder",
+                "desc": "查找西班牙全国集换式卡牌商店的平台。具有高级搜索和过滤功能。",
+                "tag": "SaaS / Web"
+            },
+            "p3": {
+                "title": "Arandor",
+                "desc": "基于纯 JavaScript 开发的经典终端 RPG 游戏。拥有多个版本和完整的背景故事。",
+                "tag": "Web / 游戏"
+            },
+            "p4": {
+                "title": "Chaotic Loom",
+                "desc": "我正作为设计师和前端开发人员积极参与此项目。",
+                "tag": "Web / 设计"
+            },
+            "p5": {
+                "title": "TCG Live Arena",
+                "desc": "为 Pokémon TCG Live 卡牌游戏组织在线锦标赛和对战的定制平台。",
+                "tag": "SaaS / Web"
+            }
+        },
+        "cursorText": {
+            "p1": "查看",
+            "p2": "查看",
+            "p3": "查看",
+            "p4": "查看",
+            "p5": "查看"
+        }
+    },
+    "Services": {
+        "title": "服务",
+        "subtitle": "针对现实问题的数字解决方案。",
+        "list": {
+            "dev": {
+                "title": "网页开发",
+                "description": "使用 Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, PostgreSQL 构建的超快网站。可扩展且优化的代码。"
+            },
+            "design": {
+                "title": "UI/UX 设计",
+                "description": "直观且极简的界面，优先考虑用户体验和品牌形象。"
+            },
+            "motion": {
+                "title": "动态图形",
+                "description": "流畅的动画和令人满意的微交互，让您的产品栩栩如生。"
+            },
+            "branding": {
+                "title": "数字身份",
+                "description": "创建连贯的视觉生态系统，从徽标到完整的风格指南。"
+            }
+        }
+    },
+    "Contact": {
+        "title": "联系我",
+        "subtitle": "您是一家公司，还是只是有一个想要实现惊人想法的人？",
+        "form": {
+            "name": "您的名字",
+            "email": "邮箱",
+            "message": "告诉我您的项目",
+            "send": "发送消息",
+            "sending": "发送中...",
+            "success": "消息已成功发送！"
+        },
+        "info": {
+            "email": "邮箱",
+            "social": "社交媒体",
+            "location": "位置"
+        }
+    },
+    "Footer": {
+        "rights": "版权所有",
+        "cv": "下载 CV",
+        "cv_loading": "正在准备 PDF...",
+        "social": "连接"
+    },
+    "Testimonials": {
+        "title": "客户",
+        "title_highlight": "评价",
+        "subtitle": "我更喜欢让与我合作过的人来评价。",
+        "reviews": {
+            "r1": {
+                "name": "Pablo",
+                "role": "El Rincón Crypto YouTube博主",
+                "text": "与 Rayelus 合作是一次极好的体验。他在品牌推广和视觉设计方面的工作显著提升了我的频道。"
+            },
+            "r2": {
+                "name": "Restonic4",
+                "role": "Chaotic Loom 创作者",
+                "text": "他在前端和设计方面的专业知识体现在他为我的项目创建的快速、干净且深思熟虑的界面中。"
+            },
+            "r3": {
+                "name": "David Carmona",
+                "role": "TCG Shop Finder CEO",
+                "text": "一位非常棒的朋友和专业人士，与他共事非常愉快。他在网页开发尤其是设计方面的技能让我们的网站与众不同。"
+            },
+            "r4": {
+                "name": "Laura",
+                "role": "TCG Live Arena 合伙人",
+                "text": "他在几天内就创建了一个原型，并完美地捕捉到了我们脑海中的想法。"
+            }
+        }
+    },
+    "About": {
+        "title_part1": "具有",
+        "title_part2": "意义的软件",
+        "bio_p1": "我从14岁开始编程，从那时起我就没有停止过构建、学习、失败，最重要的是改进。我创造<strong class='text-foreground'>坚实的数字产品</strong>，其中<em class='italic text-brand-primary'>工程</em>和<em class='italic text-brand-primary'>设计</em>共存。",
+        "bio_p2": "我与信任我的判断和成果质量的客户合作。",
+        "stats": {
+            "base_label": "基地",
+            "base_value": "全球 / 远程",
+            "exp_label": "经验",
+            "exp_value": "+5 年",
+            "stack_title": "技术栈 & 技能",
+            "dev_since": "由 2020 开始开发"
+        }
+    },
+    "Projects_Extras": {
+        "search_placeholder": "搜索项目...",
+        "filter_all": "全部",
+        "page_jump": "跳转到",
+        "page_info": "页",
+        "no_results_title": "未找到项目",
+        "clear_filters": "清除筛选"
+    },
+    "Contact_Extras": {
+        "location_value": "塞维利亚，西班牙",
+        "placeholders": {
+            "name": "您的名字",
+            "email": "example@email.com",
+            "message": "我有一个想法..."
+        }
+    },
+    "Thanks": {
+        "title": "消息已发送！",
+        "message": "感谢您的联系。我会尽快回复您。",
+        "button": "返回首页"
+    },
+    "NotFound": {
+        "title": "404",
+        "description": "页面未找到。您正在寻找的 URL 不存在。",
+        "button": "返回首页"
+    }
+}

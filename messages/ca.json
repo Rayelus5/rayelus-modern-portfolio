@@ -1,0 +1,169 @@
+{
+    "Nav": {
+        "about": "Sobre mi",
+        "projects": "Projectes",
+        "services": "Serveis",
+        "testimonials": "Ressenyes",
+        "contact": "Contacte"
+    },
+    "Hero": {
+        "badge": "Disponible per a noves oportunitats",
+        "role": "Dissenyador i Desenvolupador Web",
+        "title_part1": "SOLUCIONS",
+        "title_part2": "DIGITALS CREATIVES",
+        "description": "Especialitzat en construir interfícies d'alt impacte, minimalistes, accessibles i d'alt rendiment. Creant solucions digitals per a problemes reals.",
+        "cta_primary": "Veure projectes",
+        "cta_secondary": "Parlem"
+    },
+    "Projects": {
+        "title": "Els meus Projectes",
+        "subtitle": "Una mostra dels meus treballs més recents, els millors en disseny i desenvolupament.",
+        "view_project": "Veure Projecte",
+        "items": {
+            "p1": {
+                "title": "Pollnow",
+                "desc": "Plataforma per crear, gestionar i analitzar esdeveniments interactius amb votacions en temps real.",
+                "tag": "SaaS / Web"
+            },
+            "p2": {
+                "title": "TCG Shop Finder",
+                "desc": "Plataforma per trobar botigues de cartes col·leccionables a nivell nacional a Espanya. Cerca i filtres avançats.",
+                "tag": "SaaS / Web"
+            },
+            "p3": {
+                "title": "Arandor",
+                "desc": "Un joc RPG clàssic de terminal desenvolupat amb JavaScript pur. Diferents versions i un lore complet.",
+                "tag": "Web / Joc"
+            },
+            "p4": {
+                "title": "Chaotic Loom",
+                "desc": "Estic col·laborant activament en aquest projecte com a dissenyador i Frontend Developer.",
+                "tag": "Web / Disseny"
+            },
+            "p5": {
+                "title": "TCG Live Arena",
+                "desc": "Plataforma pròpia per organitzar tornejos i batalles online per al joc de cartes col·leccionables Pokémon TCG Live.",
+                "tag": "SaaS / Web"
+            }
+        },
+        "cursorText": {
+            "p1": "Veure",
+            "p2": "Veure",
+            "p3": "Veure",
+            "p4": "Veure",
+            "p5": "Veure"
+        }
+    },
+    "Services": {
+        "title": "Serveis",
+        "subtitle": "Solucions digitals a problemes reals.",
+        "list": {
+            "dev": {
+                "title": "Desenvolupament Web",
+                "description": "Llocs web ràpids construïts amb Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, PostgreSQL. Codi escalable i optimitzat."
+            },
+            "design": {
+                "title": "UI/UX Design",
+                "description": "Interfícies intuïtives i minimalistes que prioritzen l'experiència de l'usuari i la identitat de marca."
+            },
+            "motion": {
+                "title": "Motion Graphics",
+                "description": "Animacions fluides i microinteraccions satisfactòries que donen vida al teu producte."
+            },
+            "branding": {
+                "title": "Identitat Digital",
+                "description": "Creació d'ecosistemes visuals coherents, des de logotips fins a guies d'estil completes."
+            }
+        }
+    },
+    "Contact": {
+        "title": "Parlem",
+        "subtitle": "Ets una empresa o simplement tens una idea increïble que t'agradaria fer realitat?",
+        "form": {
+            "name": "El teu nom",
+            "email": "Email",
+            "message": "Parla'm del teu projecte",
+            "send": "Enviar missatge",
+            "sending": "Enviant...",
+            "success": "Missatge enviat amb èxit!"
+        },
+        "info": {
+            "email": "Email",
+            "social": "Xarxes",
+            "location": "Ubicació"
+        }
+    },
+    "Footer": {
+        "rights": "Tots els drets reservats",
+        "cv": "Descarregar CV",
+        "cv_loading": "Preparant PDF...",
+        "social": "Connectar"
+    },
+    "Testimonials": {
+        "title": "Valoracions de",
+        "title_highlight": "Clients",
+        "subtitle": "Prefereixo que parlin per mi els qui ja han treballat amb mi.",
+        "reviews": {
+            "r1": {
+                "name": "Pablo",
+                "role": "Youtuber de El Rincón Crypto",
+                "text": "Treballar amb Rayelus va ser una gran experiència. El seu treball en branding i disseny visual va millorar notablement el meu canal."
+            },
+            "r2": {
+                "name": "Restonic4",
+                "role": "Creador de Chaotic Loom",
+                "text": "El seu treball en frontend i disseny es nota en les interfícies ràpides i ben pensades que va crear per al meu projecte."
+            },
+            "r3": {
+                "name": "David Carmona",
+                "role": "CEO de TCG Shop Finder",
+                "text": "Un gran amic i professional amb qui dóna gust treballar. Les seves habilitats en desenvolupament web i sobretot en disseny van marcar la diferència."
+            },
+            "r4": {
+                "name": "Laura",
+                "role": "Socia de TCG Live Arena",
+                "text": "Va crear un prototip en qüestió de dies i va saber plasmar a la perfecció la idea que teníem al cap."
+            }
+        }
+    },
+    "About": {
+        "title_part1": "Software",
+        "title_part2": " amb Criteri",
+        "bio_p1": "Vaig començar a programar als 14 anys i des d'aleshores no he parat de construir, aprendre, fallar i sobretot de millorar. Crec <strong class='text-foreground'>productes digitals sòlids</strong>, on conviuen tant l'<em class='italic text-brand-primary'>enginyeria</em> com el <em class='italic text-brand-primary'>disseny</em>.",
+        "bio_p2": "Treballo amb clients que confien en el meu criteri i en la qualitat dels meus resultats.",
+        "stats": {
+            "base_label": "Base",
+            "base_value": "Global / Remot",
+            "exp_label": "Experiència",
+            "exp_value": "+5 Anys",
+            "stack_title": "STACK TECNOLÒGIC I HABILITATS",
+            "dev_since": "DESENVOLUPADOR DES DE 2020"
+        }
+    },
+    "Projects_Extras": {
+        "search_placeholder": "Cercar projectes...",
+        "filter_all": "Tots",
+        "page_jump": "Anar a",
+        "page_info": "PÀGINA",
+        "no_results_title": "No hi ha projectes",
+        "clear_filters": "Netejar Filtres"
+    },
+    "Contact_Extras": {
+        "location_value": "Sevilla, Espanya",
+        "placeholders": {
+            "name": "El teu nom",
+            "email": "exemple@email.com",
+            "message": "Tinc una idea per a..."
+        }
+    },
+    "Thanks": {
+        "title": "Missatge Enviat!",
+        "message": "Gràcies per contactar amb mi. Et respondré al més aviat possible.",
+        "button": "Tornar a l'Inici"
+    },
+    "NotFound": {
+        "title": "404",
+        "description": "Pàgina no trobada. L'URL que cerques no existeix.",
+        "button": "Tornar a l'Inici"
+    }
+}
