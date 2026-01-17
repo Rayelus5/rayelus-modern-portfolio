@@ -1,13 +1,26 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles, Download } from "lucide-react";
 import { TextReveal } from "../motion/text-reveal";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export function Hero() {
     const t = useTranslations("Hero");
+    const tcv = useTranslations("Footer");
+    const locale = useLocale();
+    const [isDownloading, setIsDownloading] = useState(false);
+
+    const handleDownloadCV = () => {
+        setIsDownloading(true);
+        // Simular preparación de archivo
+        setTimeout(() => {
+            setIsDownloading(false);
+            window.open(`/cv/${locale}/Rayelus_CV_(${locale.toUpperCase()}).pdf`, "_blank");
+        }, 1500);
+    };
 
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 overflow-hidden">
@@ -16,7 +29,7 @@ export function Hero() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex items-center gap-2 mb-8 w-fit px-4 py-1.5 rounded-full border border-brand-soft/20 bg-brand-soft/5 backdrop-blur-md"
+                className="flex items-center gap-2 mb-8 w-fit px-4 py-1.5 rounded-full border border-brand-soft/20 bg-brand-soft/5 backdrop-blur-md z-10"
             >
                 <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-soft opacity-75"></span>
@@ -33,7 +46,7 @@ export function Hero() {
                     {t("role")}
                 </h2>
 
-                <div className="text-5xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter">
+                <div className="text-6xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter">
                     <TextReveal>
                         {t("title_part1")}
                     </TextReveal>
@@ -46,7 +59,7 @@ export function Hero() {
             </div>
 
             {/* Descripción y CTAs */}
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-end z-10">
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -62,23 +75,57 @@ export function Hero() {
                     transition={{ delay: 1 }}
                     className="md:col-span-7 flex flex-wrap gap-4 md:justify-end"
                 >
-                    <button className="group relative px-8 py-4 bg-foreground text-background rounded-full font-bold overflow-hidden transition-all hover:pr-12">
-                        <span className="relative z-10 flex items-center gap-2">
-                            {t("cta_primary")}
-                            <ArrowUpRight className="w-4 h-4" />
-                        </span>
-                        <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+
+                    <button
+                        onClick={handleDownloadCV}
+                        disabled={isDownloading}
+                        className="group relative flex items-center gap-3 px-8 py-3 bg-foreground rounded-full text-background font-bold overflow-hidden transition-all hover:bg-brand-primary hover:text-white"
+                        data-cursor={tcv("cv").split(" ")[0].toUpperCase()}
+                    >
+                        <Download size={18} className={isDownloading ? "animate-bounce" : ""} />
+                        {isDownloading ? tcv("cv_loading") : tcv("cv")}
                     </button>
 
-                    <button className="px-8 py-4 border border-foreground/10 rounded-full font-bold hover:bg-surface-100 transition-colors">
+                    {/* Boton de contacto lleva a la seccion contact */}
+
+
+                    <a
+                        href="#contact"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="px-8 py-4 border border-foreground/10 rounded-full backdrop-blur-[4px] font-bold hover:bg-surface-100 transition-colors"
+                    >
                         {t("cta_secondary")}
-                    </button>
+                    </a>
                 </motion.div>
             </div>
 
-            {/* Decoración de Fondo (Abstracta) */}
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 blur-[120px] rounded-full z-0 opacity-50" />
-            <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-accent-violet/20 blur-[100px] rounded-full z-0 opacity-30" />
+            {/* Fondo Video Abstracto */}
+            <div className="absolute inset-0 z-0 hidden md:block select-none pointer-events-none">
+                <div className="absolute inset-0 bg-background/50 mix-blend-overlay z-10" />
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute top-0 right-0 w-full h-full object-cover opacity-30 mix-blend-screen"
+                    style={{
+                        maskImage: "linear-gradient(to right, transparent, black 40%), linear-gradient(to top, transparent, black 40%)",
+                        WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 50%)"
+                    }}
+                >
+                    <source src="/videos/hero-bg.mp4" type="video/mp4" />
+                </video>
+                {/* Gradiente adicional para fundir mejor a la izquierda, abajo y arriba */}
+                <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent z-10" />
+            </div>
+
+            {/* Decoración de Fondo (Abstracta) - Mantenemos como fallback o complemento */}
+            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-brand-primary/10 blur-3xl rounded-full z-0 pointer-events-none" />
         </section>
     );
 }

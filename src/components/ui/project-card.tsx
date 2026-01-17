@@ -24,18 +24,19 @@ export function ProjectCard({ title, description, tag, index, cursorText, image 
                     className="w-full mt-0"
                 >
                     <div
-                        className="w-full aspect-[16/10] relative rounded-xl overflow-hidden group-hover/card:shadow-xl cursor-pointer bg-surface-300"
+                        className="w-full aspect-[16/10] relative rounded-xl overflow-hidden group-hover/card:shadow-xl bg-surface-300 cursor-none"
                         data-cursor={cursorText}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20" />
-
-                        {/* Placeholder Text as Image */}
-                        <div className="absolute inset-0 flex items-center justify-center text-brand-soft/20 font-mono text-4xl font-bold uppercase mix-blend-overlay">
-                            {title.substring(0, 2)}
-                        </div>
+                        <Image
+                            src={image}
+                            alt={title}
+                            fill
+                            className="object-cover transition-transform duration-500 group-hover/card:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
 
                         {/* Hover Icon */}
-                        <div className="absolute bottom-4 right-4 translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">
+                        <div className="absolute bottom-4 right-4 translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 z-10">
                             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-primary text-white shadow-xl">
                                 <ArrowUpRight className="h-5 w-5" />
                             </div>

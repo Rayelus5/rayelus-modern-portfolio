@@ -2,23 +2,34 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { contactSchema, ContactFormData } from "@/utils/validators/contact";
 import { Send, Mail, MapPin, Github, Linkedin } from "lucide-react";
+import { useEffect, useState } from "react";
+
+import { Ring2 } from 'ldrs/react'
 
 export function Contact() {
     const t = useTranslations("Contact");
-    const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<ContactFormData>({
+    const tExtras = useTranslations("Contact_Extras");
+    const locale = useLocale();
+    const [redirectUrl, setRedirectUrl] = useState("");
+
+    const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<ContactFormData>({
         resolver: zodResolver(contactSchema),
     });
 
-    const onSubmit = async (data: ContactFormData) => {
-        // Simulación de envío
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-        console.log(data);
-        alert(t("form.success"));
-        reset();
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setRedirectUrl(`${window.location.origin}/${locale}/thanks`);
+        }
+    }, [locale]);
+
+    const onSubmit = (data: ContactFormData, e?: React.BaseSyntheticEvent) => {
+        if (e) {
+            e.target.submit();
+        }
     };
 
     return (
@@ -53,7 +64,7 @@ export function Contact() {
                             </div>
                             <div>
                                 <p className="text-xs font-mono uppercase text-brand-soft/60">{t("info.location")}</p>
-                                <p className="text-lg font-medium">Sevilla, España</p>
+                                <p className="text-lg font-medium">{tExtras("location_value")}</p>
                             </div>
                         </div>
                     </div>
@@ -65,13 +76,20 @@ export function Contact() {
                     whileInView={{ opacity: 1, x: 0 }}
                     className="bg-surface-100 p-8 md:p-12 rounded-[2.5rem] border border-brand-soft/10 shadow-2xl"
                 >
-                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                    <form
+                        action="https://submit-form.com/HoDKxT0jH"
+                        onSubmit={handleSubmit(onSubmit)}
+                        className="space-y-6"
+                    >
+                        <input type="hidden" name="_redirect" value={redirectUrl} />
+                        <input type="hidden" name="_append" value="false" />
+
                         <div className="space-y-2">
                             <label className="text-sm font-mono uppercase text-brand-soft/60 ml-2">{t("form.name")}</label>
                             <input
                                 {...register("name")}
                                 className="w-full bg-background border border-brand-soft/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors no-cursor-hover cursor-none"
-                                placeholder="Raimundo Palma"
+                                placeholder={tExtras("placeholders.name")}
                             />
                             {errors.name && <p className="text-red-400 text-xs ml-2">{errors.name.message}</p>}
                         </div>
@@ -81,7 +99,7 @@ export function Contact() {
                             <input
                                 {...register("email")}
                                 className="w-full bg-background border border-brand-soft/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors no-cursor-hover cursor-none"
-                                placeholder="email@ejemplo.com"
+                                placeholder={tExtras("placeholders.email")}
                             />
                             {errors.email && <p className="text-red-400 text-xs ml-2">{errors.email.message}</p>}
                         </div>
@@ -92,17 +110,31 @@ export function Contact() {
                                 {...register("message")}
                                 rows={4}
                                 className="w-full bg-background border border-brand-soft/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors resize-none no-cursor-hover cursor-none"
-                                placeholder="..."
+                                placeholder={tExtras("placeholders.message")}
                             />
                             {errors.message && <p className="text-red-400 text-xs ml-2">{errors.message.message}</p>}
                         </div>
 
                         <button
                             disabled={isSubmitting}
-                            className="group w-full bg-brand-primary text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-brand-deep transition-all active:scale-[0.98]"
+                            className="group w-full bg-brand-primary text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-brand-deep transition-all active:scale-[0.98] h-[64px]"
+                            data-cursor={t("form.send").toUpperCase().split(" ")[0]}
                         >
-                            {isSubmitting ? t("form.sending") : t("form.send")}
-                            <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                            {isSubmitting ? (
+                                <Ring2
+                                    size={40}
+                                    stroke={5}
+                                    strokeLength={0.25}
+                                    bgOpacity={0.1}
+                                    speed={0.8}
+                                    color="white"
+                                />
+                            ) : (
+                                <>
+                                    {t("form.send")}
+                                    <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                </>
+                            )}
                         </button>
                     </form>
                 </motion.div>

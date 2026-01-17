@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { TechAppGallery } from "../ui/tech-app-gallery";
 import { Code2, Globe, Cpu, Sparkles, Terminal } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function About() {
+    const t = useTranslations("About");
+
     return (
         <section className="relative w-full py-20 md:py-32 overflow-hidden">
             {/* Fondo Decorativo Sutil */}
@@ -28,15 +31,13 @@ export function About() {
                                 transition={{ duration: 0.6 }}
                                 className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.9]"
                             >
-                                BEYOND
+                                {t("title_part1")}
                                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-soft">
-                                    THE CODE
+                                    {t("title_part2")}
                                 </span>
                             </motion.h2>
                             <div className="absolute -top-6 -left-6 w-12 h-12 border-t-2 border-l-2 border-brand-primary/30" />
                         </div>
-                        {/* TODO: traducir usando t() */}
-
 
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
@@ -45,16 +46,13 @@ export function About() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-lg md:text-xl text-foreground/70 font-light border-l-4 border-brand-primary/20 pl-6 space-y-4"
                         >
+                            <div
+                                dangerouslySetInnerHTML={{ __html: t.raw("bio_p1") }}
+                            />
                             <p>
-                                I don't just build websites; <strong className="text-foreground">I construct digital ecosystems.</strong>
-                                Since 2006, I've been obsessed with the intersection of <em className="italic text-brand-primary">logic and aesthetics</em>.
-                            </p>
-                            <p>
-                                My mission is simple: to create interfaces that feel alive, responsive, and
-                                undeniably premium. Every pixel serves a purpose.
+                                {t("bio_p2")}
                             </p>
                         </motion.div>
-                        {/* TODO: traducir usando t() */}
 
                         {/* Stats / Info Grid */}
                         <motion.div
@@ -69,10 +67,9 @@ export function About() {
                                     <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                         <Globe size={20} />
                                     </div>
-                                    <span className="text-xs font-mono uppercase text-brand-soft tracking-wider">Base</span>
+                                    <span className="text-xs font-mono uppercase text-brand-soft tracking-wider">{t("stats.base_label")}</span>
                                 </div>
-                                <span className="text-xl font-bold">Global / Remote</span>
-                                {/* TODO: traducir usando t() */}
+                                <span className="text-xl font-bold">{t("stats.base_value")}</span>
                             </div>
 
                             <div className="p-4 bg-surface-100/50 rounded-2xl border border-brand-soft/5 backdrop-blur-sm hover:border-brand-primary/20 transition-colors">
@@ -80,10 +77,9 @@ export function About() {
                                     <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                         <Code2 size={20} />
                                     </div>
-                                    <span className="text-xs font-mono uppercase text-brand-soft tracking-wider">Experience</span>
+                                    <span className="text-xs font-mono uppercase text-brand-soft tracking-wider">{t("stats.exp_label")}</span>
                                 </div>
-                                <span className="text-xl font-bold">5+ Years</span>
-                                {/* TODO: traducir usando t() */}
+                                <span className="text-xl font-bold">{t("stats.exp_value")}</span>
                             </div>
                         </motion.div>
 
@@ -98,11 +94,26 @@ export function About() {
                         className="w-full lg:w-1/2 relative"
                     >
                         {/* Decorative Frames */}
-                        <div className="absolute inset-0 border border-brand-primary/10 rounded-3xl rotate-3 scale-105 z-0" />
-                        <div className="absolute inset-0 border border-brand-soft/10 rounded-3xl -rotate-5 scale-105 z-0" />
-                        <div className="absolute inset-0 border border-brand-soft/10 rounded-3xl -rotate-10 scale-110 z-0 opacity-50 blur-[1px]" />
-                        <div className="absolute inset-0 border border-brand-soft/10 rounded-3xl -rotate-20 scale-120 z-0 opacity-40 blur-[1px]" />
-                        <div className="absolute inset-0 border border-brand-soft/10 rounded-3xl -rotate-30 scale-130 z-0 opacity-20 blur-[2px]" />
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 border border-brand-primary/10 rounded-3xl scale-105 z-0"
+                        />
+                        <motion.div
+                            animate={{ rotate: -360 }}
+                            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-105 z-0"
+                        />
+                        <motion.div
+                            animate={{ rotate: -360 }}
+                            transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-110 z-0 opacity-40 blur-[1px]"
+                        />
+                        <motion.div
+                            animate={{ rotate: 360 }}
+                            transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-120 z-0 opacity-20 blur-[2px]"
+                        />
 
 
                         {/* Main Container */}
@@ -117,8 +128,7 @@ export function About() {
                                         <div className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
                                     </div>
                                     <span className="ml-3 text-xs font-mono text-brand-primary/70 tracking-widest">
-                                        TECH STACK & SKILLS
-                                        {/* TODO: traducir usando t() */}
+                                        {t("stats.stack_title")}
                                     </span>
                                 </div>
                                 <Terminal size={20} className="text-brand-primary/50 animate-pulse" />
@@ -131,8 +141,7 @@ export function About() {
 
                             {/* Footer Status */}
                             <div className="px-6 py-3 border-t border-brand-primary/10 bg-foreground/5 flex justify-between items-center text-[10px] font-mono text-brand-soft/60 uppercase">
-                                <span>DEV SINCE 2020</span>
-                                {/* TODO: traducir usando t() */}
+                                <span>{t("stats.dev_since")}</span>
                                 <span>v2.0.26</span>
                             </div>
                         </div>
@@ -140,7 +149,10 @@ export function About() {
                     </motion.div>
 
                 </div>
+
             </div>
+
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none z-10" />
         </section>
     );
 }

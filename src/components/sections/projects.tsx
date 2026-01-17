@@ -10,18 +10,63 @@ import { cn } from "@/lib/utils";
 
 export function Projects() {
     const t = useTranslations("Projects");
+    const tExtras = useTranslations("Projects_Extras");
 
-    // Datos de ejemplo
+    // Datos de ejemplo con múltiples categorías e imágenes
     const rawProjects = [
-        { id: "p1", category: "Web App", tag: t("items.p1.tag"), title: t("items.p1.title"), desc: t("items.p1.desc"), url: "#", cursorText: t("cursorText.p1") },
-        { id: "p2", category: "Web App", tag: t("items.p2.tag"), title: t("items.p2.title"), desc: t("items.p2.desc"), url: "#", cursorText: t("cursorText.p2") },
-        { id: "p3", category: "Design", tag: "Design System", title: "Aura UI System", desc: "Enterprise design system architecture.", url: "#", cursorText: "Case Study" },
-        { id: "p4", category: "E-Commerce", tag: "E-Commerce", title: "Neon Market", desc: "Next.js 14 headless shopify storefront.", url: "#", cursorText: "Shop" },
-        { id: "p5", category: "Web App", tag: "Web App", title: "TaskFlow Pro", desc: "Productivity dashboard with real-time sync.", url: "#", cursorText: "App" },
-        { id: "p6", category: "Landing", tag: "Landing", title: "Crypto Finance", desc: "High-performance marketing landing page.", url: "#", cursorText: "Preview" },
+        {
+            id: "p1",
+            categories: ["Web App", "SaaS"],
+            tag: "SaaS / Web App",
+            title: t("items.p1.title"),
+            desc: t("items.p1.desc"),
+            url: "https://pollnow.es",
+            cursorText: t("cursorText.p1"),
+            image: "/images/projects/pollnow.png"
+        },
+        {
+            id: "p2",
+            categories: ["Web App", "SaaS"],
+            tag: "SaaS / Directory",
+            title: t("items.p4.title"),
+            desc: t("items.p4.desc"),
+            url: "https://tcgshopfinder.es",
+            cursorText: t("cursorText.p4"),
+            image: "/images/projects/tcgshopfinder.png"
+        },
+        {
+            id: "p3",
+            categories: ["Web App", "Game"],
+            tag: "Web Game / RPG",
+            title: t("items.p3.title"),
+            desc: t("items.p3.desc"),
+            url: "https://arandor.es",
+            cursorText: t("cursorText.p3"),
+            image: "/images/projects/arandor.png"
+        },
+        {
+            id: "p4",
+            categories: ["Landing", "Design", "Web App"],
+            tag: "Landing / Design",
+            title: t("items.p2.title"),
+            desc: t("items.p2.desc"),
+            url: "https://chaotic-loom.com",
+            cursorText: t("cursorText.p2"),
+            image: "/images/projects/chaoticloom.png"
+        },
+        {
+            id: "p5",
+            categories: ["Web App", "Landing"],
+            tag: "Web App / Landing",
+            title: t("items.p5.title"),
+            desc: t("items.p5.desc"),
+            url: "https://limitless-decklab.vercel.app",
+            cursorText: t("cursorText.p5"),
+            image: "/images/projects/tcglivearena.png"
+        },
     ];
 
-    const filterCategories = ["All", "Web App", "Design", "E-Commerce", "Landing", "Other"];
+    const filterCategories = ["All", "Web App", "Design", "SaaS", "Landing", "Game"];
     const ITEMS_PER_PAGE = 2;
 
     const [currentPage, setCurrentPage] = useState(1);
@@ -49,7 +94,7 @@ export function Projects() {
                 p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 p.tag.toLowerCase().includes(searchQuery.toLowerCase());
 
-            const matchesCategory = activeFilter === "All" || p.category === activeFilter;
+            const matchesCategory = activeFilter === "All" || p.categories.includes(activeFilter);
             return matchesSearch && matchesCategory;
         });
     }, [searchQuery, activeFilter, rawProjects]);
@@ -166,7 +211,7 @@ export function Projects() {
                                         >
                                             <form onSubmit={handleJumpSubmit} className="flex flex-col gap-3">
                                                 <div className="flex justify-between items-center">
-                                                    <span className="text-[10px] font-bold uppercase text-foreground/50 tracking-widest">Jump to</span>
+                                                    <span className="text-[10px] font-bold uppercase text-foreground/50 tracking-widest">{tExtras("page_jump")}</span>
                                                     <X size={12} className="text-foreground/50 cursor-pointer hover:text-brand-primary" onClick={() => setShowJump(null)} />
                                                 </div>
                                                 <div className="flex gap-2">
@@ -215,7 +260,7 @@ export function Projects() {
 
                 <div className="flex flex-col gap-4 w-full md:w-auto z-20">
                     <div className="flex items-center gap-2 self-start md:self-end text-sm font-mono text-foreground/50">
-                        <span>PAGE {displayedProjects.length > 0 ? currentPage : 0} / {totalPages == 0 ? 0 : totalPages}</span>
+                        <span>{tExtras("page_info")} {displayedProjects.length > 0 ? currentPage : 0} / {totalPages == 0 ? 0 : totalPages}</span>
                     </div>
 
                     <div className="flex gap-2 relative">
@@ -226,7 +271,7 @@ export function Projects() {
                             </div>
                             <input
                                 type="text"
-                                placeholder="Search projects..."
+                                placeholder={tExtras("search_placeholder")}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className="pl-10 pr-4 py-3 w-full bg-surface-100 border border-brand-soft/20 rounded-xl focus:outline-none focus:border-brand-primary/50 transition-colors no-cursor-hover cursor-none"
@@ -269,7 +314,7 @@ export function Projects() {
                                                             : "text-foreground/70 hover:bg-surface-200"
                                                     )}
                                                 >
-                                                    {category}
+                                                    {category === "All" ? tExtras("filter_all") : category}
                                                     {activeFilter === category && <Check className="w-4 h-4" />}
                                                 </button>
                                             ))}
@@ -301,25 +346,26 @@ export function Projects() {
                 >
                     {displayedProjects.length > 0 ? (
                         displayedProjects.map((project, index) => (
-                            <Link href={project.url} key={project.id} className="block h-full">
+                            <Link href={project.url} target="_blank" key={project.id} className="block h-full">
                                 <ProjectCard
                                     index={index}
                                     title={project.title}
                                     description={project.desc}
                                     tag={project.tag}
                                     cursorText={project.cursorText}
+                                    image={project.image}
                                 />
                             </Link>
                         ))
                     ) : (
                         <div className="col-span-2 text-center py-24 flex flex-col items-center justify-center border border-dashed border-brand-soft/20 rounded-3xl">
                             <span className="text-4xl mb-4"><Search size={40} /></span>
-                            <h3 className="text-xl font-bold text-foreground">No projects found</h3>
+                            <h3 className="text-xl font-bold text-foreground">{tExtras("no_results_title")}</h3>
                             <button
                                 onClick={() => { setSearchQuery(""); setActiveFilter("All"); }}
                                 className="mt-6 px-6 py-2 text-sm font-medium text-brand-primary bg-brand-primary/10 rounded-full hover:bg-brand-primary hover:text-white transition-colors no-cursor-hover"
                             >
-                                Clear Filters
+                                {tExtras("clear_filters")}
                             </button>
                         </div>
                     )}

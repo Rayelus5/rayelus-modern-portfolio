@@ -13,10 +13,10 @@ export function CustomCursor() {
     const mouseX = useMotionValue(-100);
     const mouseY = useMotionValue(-100);
 
-    const ringX = useSpring(mouseX, { damping: 35, stiffness: 250 });
-    const ringY = useSpring(mouseY, { damping: 35, stiffness: 250 });
-    const dotX = useSpring(mouseX, { damping: 25, stiffness: 400 });
-    const dotY = useSpring(mouseY, { damping: 25, stiffness: 400 });
+    const ringX = useSpring(mouseX, { damping: 30, stiffness: 200 });
+    const ringY = useSpring(mouseY, { damping: 30, stiffness: 200 });
+    const dotX = useSpring(mouseX, { damping: 50, stiffness: 500 });
+    const dotY = useSpring(mouseY, { damping: 50, stiffness: 500 });
 
     const handleMouseMove = useCallback((e: MouseEvent) => {
         mouseX.set(e.clientX);
@@ -40,8 +40,14 @@ export function CustomCursor() {
             if (interactiveElement) {
                 setIsHovered(true);
                 const customText = interactiveElement.getAttribute("data-cursor");
-                setCursorText(customText || "VIEW");
+                setCursorText(customText || (document.documentElement.lang.startsWith("es") ? "VER" : "VIEW"));
             } else {
+                setIsHovered(false);
+                setCursorText("");
+            }
+
+            // 3. REGLA DE EXCLUSION: Movil no hace hover
+            if (window.innerWidth < 768) {
                 setIsHovered(false);
                 setCursorText("");
             }

@@ -33,15 +33,14 @@ export function ServiceItem({ title, description, index }: ServiceItemProps) {
                     </h3>
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isHovered ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                    className="max-w-xs"
-                >
+                <div className={cn(
+                    "max-w-xs transition-all duration-500",
+                    isHovered ? "opacity-100 translate-x-0" : "opacity-100 md:opacity-0 md:-translate-x-4"
+                )}>
                     <p className="text-sm text-foreground/60 leading-relaxed italic">
                         {description}
                     </p>
-                </motion.div>
+                </div>
 
                 <div className={cn(
                     "transition-transform duration-500",

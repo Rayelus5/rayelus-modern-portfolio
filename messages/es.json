@@ -3,36 +3,55 @@
         "about": "Sobre mí",
         "projects": "Proyectos",
         "services": "Servicios",
+        "testimonials": "Reseñas",
         "contact": "Contacto"
     },
     "Hero": {
-        "badge": "Disponible para nuevos proyectos",
-        "role": "Diseñador & Desarrollador Frontend",
-        "title_part1": "CREANDO EXPERIENCIAS",
-        "title_part2": "DIGITALES ÚNICAS",
-        "description": "Especializado en construir interfaces de alto impacto, minimalistas y ultra fluidas. Elevando el estándar del desarrollo web moderno.",
+        "badge": "Disponible para nuevas experiencias",
+        "role": "Diseñador y Desarrollador Web",
+        "title_part1": "SOLUCIONES",
+        "title_part2": "DIGITALES CREATIVAS",
+        "description": "Especializado en construir interfaces de alto impacto, minimalistas, accesibles y de alto rendimiento. Creando soluciones digitales para problemas reales.",
         "cta_primary": "Ver proyectos",
         "cta_secondary": "Hablemos"
     },
     "Projects": {
-        "title": "Proyectos Seleccionados",
-        "subtitle": "Una muestra de mis trabajos más recientes fusionando diseño y performance.",
+        "title": "Mis Proyectos",
+        "subtitle": "Una muestra de mis trabajos más recientes, los mejores en cuanto a diseño y nivel de desarrollo.",
         "view_project": "Ver Proyecto",
         "items": {
             "p1": {
-                "title": "EcoSphere AI",
-                "desc": "Plataforma de monitoreo ambiental con visualización de datos en tiempo real.",
-                "tag": "SaaS / AI"
+                "title": "Pollnow",
+                "desc": "Plataforma para crear, gestionar y analizar eventos interactivos con votaciones en tiempo real.",
+                "tag": "SaaS / Web"
             },
             "p2": {
-                "title": "Nexus OS",
-                "desc": "Concepto de sistema operativo web enfocado en la productividad minimalista.",
-                "tag": "Web App"
+                "title": "TCG Shop Finder",
+                "desc": "Plataforma para encontrar tiendas de cartas coleccionables a nivel nacional en España. Búsqueda y filtros avanzados.",
+                "tag": "SaaS / Web"
+            },
+            "p3": {
+                "title": "Arandor",
+                "desc": "Un juego RPG clásico de terminal desarrollado con JavaScript puro. Diferentes versiones y un lore completo.",
+                "tag": "Web / Game"
+            },
+            "p4": {
+                "title": "Chaotic Loom",
+                "desc": "Estoy colaborando activamente en este proyecto como diseñador y Frontend Developer.",
+                "tag": "Web / Design"
+            },
+            "p5": {
+                "title": "TCG Live Arena",
+                "desc": "Plataforma propia para organizar torneos y batallas online para el juego de cartas coleccionables Pokémon TCG Live.",
+                "tag": "SaaS / Web"
             }
         },
         "cursorText": {
             "p1": "Ver",
-            "p2": "Ver"
+            "p2": "Ver",
+            "p3": "Ver",
+            "p4": "Ver",
+            "p5": "Ver"
         }
     },
     "Services": {
@@ -41,7 +60,7 @@
         "list": {
             "dev": {
                 "title": "Desarrollo Web",
-                "description": "Sitios web ultra rápidos construidos con Next.js y React. Código limpio, escalable y optimizado para SEO."
+                "description": "Sitios web rápidos construidos con Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, PostgreSQL. Código escalable y optimizado."
             },
             "design": {
                 "title": "UI/UX Design",
@@ -49,17 +68,17 @@
             },
             "motion": {
                 "title": "Motion Graphics",
-                "description": "Animaciones fluidas y microinteracciones que dan vida a tu producto y retienen a los usuarios."
+                "description": "Animaciones fluidas y microinteracciones satisfactorias que dan vida a tu producto además de retener a tus usuarios."
             },
             "branding": {
                 "title": "Identidad Digital",
-                "description": "Creación de ecosistemas visuales coherentes, desde logotipos hasta guías de estilo completas."
+                "description": "Creación de ecosistemas visuales coherentes, desde logotipos hasta guías de estilo completas (Tanto para individuos como para empresas)."
             }
         }
     },
     "Contact": {
         "title": "Hablemos",
-        "subtitle": "¿Tienes una idea increíble? Hagámosla realidad.",
+        "subtitle": "¿Eres una empresa o simplemente tienes una idea increíble que te gustaría hacer realidad?",
         "form": {
             "name": "Tu nombre",
             "email": "Email",
@@ -79,5 +98,67 @@
         "cv": "Descargar CV",
         "cv_loading": "Preparando PDF...",
         "social": "Conectar"
+    },
+    "Testimonials": {
+        "title": "Valoraciones de",
+        "title_highlight": "Clientes",
+        "subtitle": "Prefiero que hablen por mí quienes ya trabajaron conmigo.",
+        "reviews": {
+            "r1": {
+                "name": "Pablo",
+                "role": "Youtuber de El Rincón Crypto",
+                "text": "Trabajar con Rayelus fue una gran experiencia. Su trabajo en branding y diseño visual mejoró notablemente mi canal, y siempre fue proactivo y profesional."
+            },
+            "r2": {
+                "name": "Restonic4",
+                "role": "Creador de Chaotic Loom",
+                "text": "Su trabajo en frontend y diseño se nota en las interfaces rápidas, limpias y bien pensadas que creó para mi proyecto. Supo convertir ideas en un producto real y atractivo."
+            },
+            "r3": {
+                "name": "David Carmona",
+                "role": "CEO de TCG Shop Finder",
+                "text": "Un gran amigo y profesional con el que da gusto trabajar. Sus habilidades en desarrollo weby sobretodo en diseño marcaron la diferencia en nuestra web."
+            },
+            "r4": {
+                "name": "Laura",
+                "role": "Socia de TCG Live Arena",
+                "text": "Creó un prototipo en cuestión de días y supo plasmar a la perfección la idea que teníamos en mente. Además de diseñar interfaces y animaciones inspiradas en un diseño Liquid Glass."
+            }
+        },
+        "About": {
+            "title_part1": "Software",
+            "title_part2": "con Criterio",
+            "bio_p1": "Empecé a programar a los 14 años y desde entonces no he parado de construir, aprender, fallar y sobre todo de mejorar. Creo <strong class='text-foreground'>productos digitales sólidos</strong>, donde conviven tanto la <em class='italic text-brand-primary'>ingeniería</em> como el <em class='italic text-brand-primary'>diseño</em>.",
+            "bio_p2": "Trabajo con clientes que confían en mi criterio y en la calidad de mis resultados.",
+            "stats": {
+                "base_label": "Base",
+                "base_value": "Global / Remoto",
+                "exp_label": "Experiencia",
+                "exp_value": "+5 Años",
+                "stack_title": "STACK TECNOLÓGICO Y HABILIDADES",
+                "dev_since": "DESARROLLADOR DESDE 2020"
+            }
+        },
+        "Projects_Extras": {
+            "search_placeholder": "Buscar proyectos...",
+            "filter_all": "Todos",
+            "page_jump": "Ir a",
+            "page_info": "PÁGINA",
+            "no_results_title": "No hay proyectos",
+            "clear_filters": "Limpiar Filtros"
+        },
+        "Contact_Extras": {
+            "location_value": "Sevilla, España",
+            "placeholders": {
+                "name": "Tu nombre",
+                "email": "ejemplo@email.com",
+                "message": "Tengo una idea para..."
+            }
+        }
+    },
+    "Thanks": {
+        "title": "¡Mensaje Enviado!",
+        "message": "Gracias por contactar conmigo. Te responderé lo antes posible.",
+        "button": "Volver al Inicio"
     }
 }

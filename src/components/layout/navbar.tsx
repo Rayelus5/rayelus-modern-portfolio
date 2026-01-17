@@ -6,14 +6,15 @@ import { useTranslations } from "next-intl";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { LanguageSwitcher } from "../ui/language-switcher";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User, Code, Briefcase, Mail, Star } from "lucide-react";
 
 // IDs de las secciones definidos en el DOM
 const navItems = [
-    { name: "about", href: "#about" },
-    { name: "projects", href: "#projects" },
-    { name: "services", href: "#services" },
-    { name: "contact", href: "#contact" },
+    { name: "about", href: "#about", icon: User },
+    { name: "projects", href: "#projects", icon: Code },
+    { name: "services", href: "#services", icon: Briefcase },
+    { name: "testimonials", href: "#testimonials", icon: Star },
+    { name: "contact", href: "#contact", icon: Mail },
 ];
 
 export function Navbar() {
@@ -100,17 +101,23 @@ export function Navbar() {
                         initial={{ opacity: 0, scale: 0.95, y: -20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: -20 }}
-                        className="absolute top-24 left-6 right-6 p-8 rounded-[2rem] bg-surface-100 border border-brand-soft/10 shadow-3xl md:hidden pointer-events-auto"
+                        className="absolute top-24 mt-4 left-6 right-6 p-10 rounded-[2rem] bg-surface-100/80 backdrop-blur-md border border-brand-soft/10 shadow-3xl md:hidden pointer-events-auto"
                     >
-                        <ul className="flex flex-col gap-6 items-center">
+                        <ul className="flex flex-col gap-8 w-full max-w-[200px] mx-auto">
                             {navItems.map((item) => (
                                 <li key={item.name}>
                                     <a
                                         href={item.href}
                                         onClick={(e) => handleScroll(e, item.href)}
-                                        className="text-2xl font-bold tracking-tighter hover:text-brand-primary"
+                                        className={cn(
+                                            "flex items-center gap-6 text-2xl font-bold tracking-tighter transition-colors hover:text-brand-primary",
+                                            activeSection === item.href.replace("#", "")
+                                                ? "text-brand-primary"
+                                                : "text-foreground"
+                                        )}
                                     >
-                                        {t(item.name)}
+                                        <item.icon size={32} className="text-brand-primary shrink-0" />
+                                        <span className="uppercase">{t(item.name)}</span>
                                     </a>
                                 </li>
                             ))}

@@ -9,7 +9,7 @@ export function Preloader() {
 
     useEffect(() => {
         // Simulación de carga
-        const duration = 2000; // 2 segundos
+        const duration = 800;
         const steps = 100;
         const intervalTime = duration / steps;
 

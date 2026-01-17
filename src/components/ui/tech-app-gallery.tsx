@@ -92,6 +92,7 @@ export function TechAppGallery() {
                 }}
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/15 via-transparent to-brand-primary/15 pointer-events-none" />
+            <div className="absolute inset-0 pointer-events-none z-10 bg-[radial-gradient(circle_at_center,transparent_5%,#050505_85%)]" />
 
             <motion.div
                 className="absolute left-1/2 top-1/2"
