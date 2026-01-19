@@ -28,10 +28,10 @@ export function Projects() {
             id: "p2",
             categories: ["Web App", "SaaS"],
             tag: "SaaS / Directory",
-            title: t("items.p4.title"),
-            desc: t("items.p4.desc"),
+            title: t("items.p2.title"),
+            desc: t("items.p2.desc"),
             url: "https://tcgshopfinder.es",
-            cursorText: t("cursorText.p4"),
+            cursorText: t("cursorText.p2"),
             image: "/images/projects/tcgshopfinder.png"
         },
         {
@@ -48,10 +48,10 @@ export function Projects() {
             id: "p4",
             categories: ["Landing", "Design", "Web App"],
             tag: "Landing / Design",
-            title: t("items.p2.title"),
-            desc: t("items.p2.desc"),
+            title: t("items.p4.title"),
+            desc: t("items.p4.desc"),
             url: "https://chaotic-loom.com",
-            cursorText: t("cursorText.p2"),
+            cursorText: t("cursorText.p4"),
             image: "/images/projects/chaoticloom.png"
         },
         {
