@@ -16,7 +16,7 @@ interface ProjectCardProps {
 export function ProjectCard({ title, description, tag, index, cursorText, image = "/images/placeholder-project.jpg" }: ProjectCardProps) {
     return (
         <CardContainer className="inter-var w-full h-full" containerClassName="py-2">
-            <CardBody className="bg-surface-200/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-brand-primary/[0.1] border-black/[0.1] w-full h-auto rounded-3xl p-6 border border-brand-primary/10 backdrop-blur-sm">
+            <CardBody className="bg-surface-200/50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-brand-primary/[0.1] border-black/[0.1] w-full h-full rounded-3xl p-6 border-2 border-brand-primary/20 backdrop-blur-sm hover:scale-105 transition-transform duration-500 flex flex-col">
 
                 {/* Image Section */}
                 <CardItem
@@ -45,7 +45,7 @@ export function ProjectCard({ title, description, tag, index, cursorText, image 
                 </CardItem>
 
                 {/* Content Section */}
-                <div className="mt-6 flex flex-col gap-2">
+                <div className="mt-6 flex flex-col gap-2 flex-1">
                     <CardItem
                         translateZ="60"
                         className="flex items-center justify-between w-full"
@@ -66,7 +66,7 @@ export function ProjectCard({ title, description, tag, index, cursorText, image 
                     <CardItem
                         as="p"
                         translateZ="60"
-                        className="text-sm text-foreground/60 max-w-sm mt-2 leading-relaxed"
+                        className="text-sm text-foreground/60 max-w-full mt-2 leading-relaxed"
                     >
                         {description}
                     </CardItem>

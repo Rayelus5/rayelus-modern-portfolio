@@ -85,7 +85,7 @@ export function TechAppGallery() {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="absolute inset-0 opacity-20 pointer-events-none"
+            <div className="absolute inset-0 opacity-50 pointer-events-none"
                 style={{
                     backgroundImage: `radial-gradient(circle at 1.5px 1.5px, rgb(255, 255, 255) 1px, transparent 0)`,
                     backgroundSize: '24px 24px'

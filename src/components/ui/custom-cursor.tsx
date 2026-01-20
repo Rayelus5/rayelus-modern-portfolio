@@ -13,10 +13,10 @@ export function CustomCursor() {
     const mouseX = useMotionValue(-100);
     const mouseY = useMotionValue(-100);
 
-    const ringX = useSpring(mouseX, { damping: 30, stiffness: 200 });
-    const ringY = useSpring(mouseY, { damping: 30, stiffness: 200 });
-    const dotX = useSpring(mouseX, { damping: 50, stiffness: 500 });
-    const dotY = useSpring(mouseY, { damping: 50, stiffness: 500 });
+    const ringX = useSpring(mouseX, { damping: 40, stiffness: 300 });
+    const ringY = useSpring(mouseY, { damping: 40, stiffness: 300 });
+    const dotX = useSpring(mouseX, { damping: 60, stiffness: 800 });
+    const dotY = useSpring(mouseY, { damping: 60, stiffness: 800 });
 
     const handleMouseMove = useCallback((e: MouseEvent) => {
         mouseX.set(e.clientX);

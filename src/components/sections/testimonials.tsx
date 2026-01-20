@@ -138,7 +138,7 @@ const MarqueeContent = ({ reviews }: { reviews: ReviewProps[] }) => (
 
 const TestimonialCard = ({ review }: { review: ReviewProps }) => {
     return (
-        <div className="w-[400px] md:w-[450px] p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-brand-primary/30 transition-colors group relative flex flex-col justify-between">
+        <div className="w-[400px] md:w-[450px] p-6 rounded-4xl bg-white/5 border-2 border-brand-soft/20 backdrop-blur-sm hover:border-brand-primary/40 transition-colors group relative flex flex-col justify-between">
             {/* Quote Icon */}
             <div className="absolute top-6 right-6 text-brand-primary/20 group-hover:text-brand-primary/40 transition-colors">
                 <Quote size={40} />

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@next/bundle-analyzer": "^16.1.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.26.2",
@@ -22,6 +23,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-hook-form": "^7.71.1",
+    "sharp": "^0.34.5",
     "tailwind-merge": "^3.4.0",
     "tech-stack-icons": "^3.4.0",
     "zod": "^4.3.5"

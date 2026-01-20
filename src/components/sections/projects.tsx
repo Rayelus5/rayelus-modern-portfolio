@@ -166,7 +166,7 @@ export function Projects() {
                 <button
                     disabled={currentPage === 1}
                     onClick={() => handlePageChange(currentPage - 1)}
-                    className="w-10 h-10 flex items-center justify-center rounded-xl border border-brand-primary/20 bg-surface-100 hover:bg-brand-primary/10 text-foreground/50 hover:text-brand-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-foreground/50 transition-all"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl border-2 border-brand-primary/20 bg-surface-100 hover:bg-brand-primary/10 text-foreground/50 hover:text-brand-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-foreground/50 transition-all"
                 >
                     <ChevronLeft size={18} />
                 </button>
@@ -178,7 +178,7 @@ export function Projects() {
                                 key={i}
                                 onClick={() => handlePageChange(p)}
                                 className={cn(
-                                    "w-10 h-10 flex items-center justify-center rounded-xl border text-xs font-bold transition-all",
+                                    "w-10 h-10 flex items-center justify-center rounded-xl border-2 text-xs font-bold transition-all",
                                     currentPage === p
                                         ? "bg-brand-primary text-white border-brand-primary shadow-lg shadow-brand-primary/25"
                                         : "border-brand-primary/10 bg-surface-100 text-foreground/50 hover:text-brand-primary hover:border-brand-primary/30"
@@ -207,7 +207,7 @@ export function Projects() {
                                             initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                             animate={{ opacity: 1, y: 0, scale: 1 }}
                                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 z-50 p-4 border border-brand-primary/20 bg-surface-100/90 backdrop-blur-xl rounded-2xl shadow-2xl min-w-[140px]"
+                                            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 z-50 p-4 border-2 border-brand-primary/20 bg-surface-100/90 backdrop-blur-xl rounded-2xl shadow-2xl min-w-[140px]"
                                         >
                                             <form onSubmit={handleJumpSubmit} className="flex flex-col gap-3">
                                                 <div className="flex justify-between items-center">
@@ -219,7 +219,7 @@ export function Projects() {
                                                         autoFocus type="number" value={jumpValue}
                                                         onChange={(e) => setJumpValue(e.target.value)}
                                                         placeholder="#"
-                                                        className="w-full bg-surface-200 border border-brand-primary/10 rounded-lg px-2 py-1.5 text-xs font-bold text-foreground outline-none focus:border-brand-primary/50"
+                                                        className="w-full bg-surface-200 border-2 border-brand-primary/10 rounded-lg px-2 py-1.5 text-xs font-bold text-foreground outline-none focus:border-brand-primary/50"
                                                     />
                                                     <button type="submit" className="bg-brand-primary text-white p-1.5 rounded-lg hover:bg-brand-deep transition-colors">
                                                         <ArrowRight size={14} />
@@ -237,7 +237,7 @@ export function Projects() {
                 <button
                     disabled={currentPage === totalPages}
                     onClick={() => handlePageChange(currentPage + 1)}
-                    className="w-10 h-10 flex items-center justify-center rounded-xl border border-brand-primary/20 bg-surface-100 hover:bg-brand-primary/10 text-foreground/50 hover:text-brand-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-foreground/50 transition-all"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl border-2 border-brand-primary/20 bg-surface-100 hover:bg-brand-primary/10 text-foreground/50 hover:text-brand-primary disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-foreground/50 transition-all"
                 >
                     <ChevronRight size={18} />
                 </button>
@@ -274,7 +274,7 @@ export function Projects() {
                                 placeholder={tExtras("search_placeholder")}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="pl-10 pr-4 py-3 w-full bg-surface-100 border border-brand-soft/20 rounded-xl focus:outline-none focus:border-brand-primary/50 transition-colors no-cursor-hover cursor-none"
+                                className="pl-10 pr-4 py-3 w-full bg-surface-100 border-2 border-brand-soft/20 rounded-xl focus:outline-none focus:border-brand-primary/50 transition-colors no-cursor-hover cursor-none"
                             />
                         </div>
 
@@ -283,7 +283,7 @@ export function Projects() {
                             <button
                                 onClick={() => setIsFilterOpen(!isFilterOpen)}
                                 className={cn(
-                                    "p-3 rounded-xl border transition-all flex items-center gap-2 no-cursor-hover",
+                                    "p-3 rounded-xl border-2 transition-all flex items-center gap-2 no-cursor-hover",
                                     isFilterOpen || activeFilter !== "All"
                                         ? "bg-brand-primary text-white border-brand-primary"
                                         : "bg-surface-100 border-brand-soft/20 text-brand-soft hover:bg-surface-200"
@@ -300,7 +300,7 @@ export function Projects() {
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                         transition={{ duration: 0.2 }}
-                                        className="absolute right-0 mt-2 w-48 bg-surface-100 border border-brand-soft/10 rounded-xl shadow-xl overflow-hidden z-[50] no-cursor-hover"
+                                        className="absolute right-0 mt-2 w-48 bg-surface-100 border-2 border-brand-soft/10 rounded-xl shadow-xl overflow-hidden z-[50] no-cursor-hover"
                                     >
                                         <div className="py-1">
                                             {filterCategories.map((category) => (
@@ -358,7 +358,7 @@ export function Projects() {
                             </Link>
                         ))
                     ) : (
-                        <div className="col-span-2 text-center py-24 flex flex-col items-center justify-center border border-dashed border-brand-soft/20 rounded-3xl">
+                        <div className="col-span-2 text-center py-24 flex flex-col items-center justify-center border-2 border-dashed border-brand-soft/20 rounded-3xl">
                             <span className="text-4xl mb-4"><Search size={40} /></span>
                             <h3 className="text-xl font-bold text-foreground">{tExtras("no_results_title")}</h3>
                             <button

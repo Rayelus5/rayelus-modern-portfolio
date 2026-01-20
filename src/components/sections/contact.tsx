@@ -74,7 +74,7 @@ export function Contact() {
                 <motion.div
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    className="bg-surface-100 p-8 md:p-12 rounded-[2.5rem] border border-brand-soft/10 shadow-2xl"
+                    className="bg-surface-100 p-8 md:p-12 rounded-[2.5rem] border-2 border-brand-primary/30 shadow-2xl"
                 >
                     <form
                         action="https://submit-form.com/HoDKxT0jH"
@@ -88,7 +88,7 @@ export function Contact() {
                             <label className="text-sm font-mono uppercase text-brand-soft/60 ml-2">{t("form.name")}</label>
                             <input
                                 {...register("name")}
-                                className="w-full bg-background border border-brand-soft/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors no-cursor-hover cursor-none"
+                                className="w-full bg-background border-2 border-brand-soft/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors no-cursor-hover cursor-none"
                                 placeholder={tExtras("placeholders.name")}
                             />
                             {errors.name && <p className="text-red-400 text-xs ml-2">{errors.name.message}</p>}
@@ -98,7 +98,7 @@ export function Contact() {
                             <label className="text-sm font-mono uppercase text-brand-soft/60 ml-2">{t("form.email")}</label>
                             <input
                                 {...register("email")}
-                                className="w-full bg-background border border-brand-soft/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors no-cursor-hover cursor-none"
+                                className="w-full bg-background border-2 border-brand-soft/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors no-cursor-hover cursor-none"
                                 placeholder={tExtras("placeholders.email")}
                             />
                             {errors.email && <p className="text-red-400 text-xs ml-2">{errors.email.message}</p>}
@@ -109,7 +109,7 @@ export function Contact() {
                             <textarea
                                 {...register("message")}
                                 rows={4}
-                                className="w-full bg-background border border-brand-soft/10 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors resize-none no-cursor-hover cursor-none"
+                                className="w-full bg-background border-2 border-brand-soft/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-primary transition-colors resize-none no-cursor-hover cursor-none"
                                 placeholder={tExtras("placeholders.message")}
                             />
                             {errors.message && <p className="text-red-400 text-xs ml-2">{errors.message.message}</p>}

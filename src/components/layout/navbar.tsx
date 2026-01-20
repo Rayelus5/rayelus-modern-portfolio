@@ -51,7 +51,7 @@ export function Navbar() {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none">
-            <nav className="flex items-center gap-6 px-6 py-3 rounded-full border border-brand-soft/20 bg-background/60 backdrop-blur-xl shadow-2xl pointer-events-auto">
+            <nav className="flex items-center gap-6 px-6 py-3 rounded-full border-2 border-brand-soft/20 bg-background/60 backdrop-blur-md shadow-2xl pointer-events-auto">
                 <a
                     href="#home"
                     onClick={(e) => handleScroll(e, "#home")}

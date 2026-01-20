@@ -62,7 +62,7 @@ export function About() {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             className="grid grid-cols-2 gap-6 mt-4"
                         >
-                            <div className="p-4 bg-surface-100/50 rounded-2xl border border-brand-soft/5 backdrop-blur-sm hover:border-brand-primary/20 transition-colors">
+                            <div className="p-4 bg-surface-100/50 rounded-2xl border-2 border-brand-primary/20 backdrop-blur-[2px] hover:border-brand-soft/30 transition-colors">
                                 <div className="flex items-center gap-3 mb-2">
                                     <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                         <Globe size={20} />
@@ -72,7 +72,7 @@ export function About() {
                                 <span className="text-xl font-bold">{t("stats.base_value")}</span>
                             </div>
 
-                            <div className="p-4 bg-surface-100/50 rounded-2xl border border-brand-soft/5 backdrop-blur-sm hover:border-brand-primary/20 transition-colors">
+                            <div className="p-4 bg-surface-100/50 rounded-2xl border-2 border-brand-primary/20 backdrop-blur-[2px] hover:border-brand-soft/30 transition-colors">
                                 <div className="flex items-center gap-3 mb-2">
                                     <div className="p-2 bg-brand-primary/10 rounded-lg text-brand-primary">
                                         <Code2 size={20} />
@@ -97,27 +97,27 @@ export function About() {
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 border border-brand-primary/10 rounded-3xl scale-105 z-0"
+                            className="absolute inset-0 border border-brand-primary/10 rounded-3xl scale-105 -z-10"
                         />
                         <motion.div
                             animate={{ rotate: -360 }}
                             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-105 z-0"
+                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-105 -z-10"
                         />
                         <motion.div
                             animate={{ rotate: -360 }}
                             transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-110 z-0 opacity-40 blur-[1px]"
+                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-110 -z-10 opacity-40 blur-[1px]"
                         />
                         <motion.div
                             animate={{ rotate: 360 }}
                             transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-120 z-0 opacity-20 blur-[2px]"
+                            className="absolute inset-0 border border-brand-soft/10 rounded-3xl scale-120 -z-10 opacity-20 blur-[2px]"
                         />
 
 
                         {/* Main Container */}
-                        <div className="relative z-10 bg-surface-100/80 backdrop-blur-xl border border-brand-primary/20 rounded-3xl overflow-hidden shadow-2xl shadow-brand-primary/10">
+                        <div className="relative z-10 bg-surface-100/80 backdrop-blur-xl border-2 border-brand-primary/20 rounded-3xl overflow-hidden shadow-2xl shadow-brand-primary/10 hover:scale-105 transition-transform duration-500">
 
                             {/* HUD Header */}
                             <div className="flex items-center justify-between px-6 py-4 border-b border-brand-primary/10 bg-foreground/5">
