@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { LanguageSwitcher } from "../ui/language-switcher";
 import { cn } from "@/lib/utils";
@@ -19,11 +20,18 @@ const navItems = [
 
 export function Navbar() {
     const t = useTranslations("Nav");
+    const locale = useLocale();
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("");
 
+    // Helper to check if we are on the home page (e.g. /en or /es or /)
+    const isHomePage = pathname === `/${locale}` || pathname === "/";
+
     // Detectar sección activa al hacer scroll
     useEffect(() => {
+        if (!isHomePage) return;
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -39,9 +47,11 @@ export function Navbar() {
         });
 
         return () => observer.disconnect();
-    }, []);
+    }, [isHomePage]);
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (!isHomePage) return; // Allow natural navigation
+
         e.preventDefault();
         const targetId = href.replace("#", "");
         const elem = document.getElementById(targetId);
@@ -49,12 +59,18 @@ export function Navbar() {
         setIsOpen(false);
     };
 
+    const getLinkHref = (itemHref: string) => {
+        if (isHomePage) return itemHref;
+        // Ensure we don't double slash if locale is empty (though usually it is 'en' or 'es')
+        return `/${locale}${itemHref}`;
+    };
+
     return (
         <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none">
             <nav className="flex items-center gap-6 px-6 py-3 rounded-full border-2 border-brand-soft/20 bg-background/60 backdrop-blur-md shadow-2xl pointer-events-auto">
                 <a
-                    href="#home"
-                    onClick={(e) => handleScroll(e, "#home")}
+                    href={isHomePage ? "#home" : `/${locale}`}
+                    onClick={(e) => isHomePage ? handleScroll(e, "#home") : undefined}
                     className="text-xl font-bold tracking-tighter hover:text-brand-primary transition-colors"
                 >
                     RAYELUS<span className="text-brand-primary">.</span>
@@ -65,11 +81,11 @@ export function Navbar() {
                     {navItems.map((item) => (
                         <li key={item.name}>
                             <a
-                                href={item.href}
+                                href={getLinkHref(item.href)}
                                 onClick={(e) => handleScroll(e, item.href)}
                                 className={cn(
                                     "text-sm font-mono uppercase tracking-widest transition-all hover:text-brand-primary",
-                                    activeSection === item.href.replace("#", "")
+                                    activeSection === item.href.replace("#", "") && isHomePage
                                         ? "text-brand-primary font-bold"
                                         : "text-foreground/50"
                                 )}
@@ -107,11 +123,11 @@ export function Navbar() {
                             {navItems.map((item) => (
                                 <li key={item.name}>
                                     <a
-                                        href={item.href}
+                                        href={getLinkHref(item.href)}
                                         onClick={(e) => handleScroll(e, item.href)}
                                         className={cn(
                                             "flex items-center gap-6 text-2xl font-bold tracking-tighter transition-colors hover:text-brand-primary",
-                                            activeSection === item.href.replace("#", "")
+                                            activeSection === item.href.replace("#", "") && isHomePage
                                                 ? "text-brand-primary"
                                                 : "text-foreground"
                                         )}

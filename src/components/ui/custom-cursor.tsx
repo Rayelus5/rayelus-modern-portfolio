@@ -24,7 +24,11 @@ export function CustomCursor() {
         if (!isVisible) setIsVisible(true);
     }, [mouseX, mouseY, isVisible]);
 
+    const [isMounted, setIsMounted] = useState(false);
+
     useEffect(() => {
+        setIsMounted(true);
+        // ... existing event listeners logic ...
         const handleMouseOver = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
 
@@ -75,7 +79,7 @@ export function CustomCursor() {
         };
     }, [handleMouseMove]);
 
-    if (typeof window === "undefined") return null;
+    if (!isMounted) return null;
 
     return (
         <div className="fixed inset-0 z-[9999] pointer-events-none overflow-hidden">

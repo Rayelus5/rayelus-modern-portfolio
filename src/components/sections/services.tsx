@@ -1,10 +1,22 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ServiceItem } from "../ui/service-item";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { TailChase } from 'ldrs/react';
+import 'ldrs/react/TailChase.css';
 
 export function Services() {
     const t = useTranslations("Services");
+    const locale = useLocale();
+    const router = useRouter();
+    const [isLoadingServices, setIsLoadingServices] = useState(false);
+
+    const handleExploreServices = () => {
+        setIsLoadingServices(true);
+        router.push(`/${locale}/services`);
+    };
 
     const services = [
         { title: t("list.dev.title"), description: t("list.dev.description") },
@@ -41,6 +53,27 @@ export function Services() {
                             description={service.description}
                         />
                     ))}
+                </div>
+
+                <div className="mt-16 flex justify-center">
+                    <button
+                        onClick={handleExploreServices}
+                        disabled={isLoadingServices}
+                        className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-primary/10 text-brand-primary rounded-full hover:bg-brand-primary hover:text-white transition-all overflow-hidden min-w-[300px]"
+                    >
+                        {isLoadingServices ? (
+                            <TailChase
+                                size="24"
+                                speed="1.75"
+                                color="currentColor"
+                            />
+                        ) : (
+                            <>
+                                <span className="font-bold relative z-10">Explorar todos los Servicios</span>
+                                <span className="absolute inset-0 bg-brand-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out" />
+                            </>
+                        )}
+                    </button>
                 </div>
             </div>
         </section>

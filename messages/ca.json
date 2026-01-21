@@ -165,5 +165,15 @@
         "title": "404",
         "description": "Pàgina no trobada. L'URL que cerques no existeix.",
         "button": "Tornar a l'Inici"
+    },
+    "ServicesPage": {
+        "badge": "Marketplace de Serveis",
+        "title_prefix": "Solucions Digitals",
+        "title_highlight": "a Mida",
+        "description": "Troba el servei que més s'adapti a tu, compara plans i troba la solució perfecta per portar el teu projecte al màxim nivell.",
+        "search_placeholder": "Cercar servei (ex. Landing, Botiga...)",
+        "filter_all": "Tots",
+        "no_results": "No s'han trobat serveis",
+        "clear_filters": "Netejar filtres"
     }
 }

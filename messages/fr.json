@@ -165,5 +165,15 @@
         "title": "404",
         "description": "Page non trouvée. L'URL que vous recherchez n'existe pas.",
         "button": "Retour à l'accueil"
+    },
+    "ServicesPage": {
+        "badge": "Marketplace de Services",
+        "title_prefix": "Solutions Numériques",
+        "title_highlight": "sur Mesure",
+        "description": "Trouvez le service qui vous convient le mieux, comparez les plans et trouvez la solution parfaite pour amener votre projet au niveau supérieur.",
+        "search_placeholder": "Rechercher un service (ex. Landing, Boutique...)",
+        "filter_all": "Tous",
+        "no_results": "Aucun service trouvé",
+        "clear_filters": "Effacer les filtres"
     }
 }

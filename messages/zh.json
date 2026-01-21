@@ -1,169 +1,179 @@
 {
     "Nav": {
-        "about": "关于",
-        "projects": "项目",
-        "services": "服务",
-        "testimonials": "评价",
-        "contact": "联系"
+        "about": "About",
+        "projects": "Projects",
+        "services": "Services",
+        "testimonials": "Reviews",
+        "contact": "Contact"
     },
     "Hero": {
-        "badge": "寻求新的合作机会",
-        "role": "网页设计师 & 开发者",
-        "title_part1": "创意",
-        "title_part2": "数字解决方案",
-        "description": "专注于构建高影响力、极简主义、无障碍且高性能的界面。为现实问题创造数字解决方案。",
-        "cta_primary": "查看项目",
-        "cta_secondary": "联系我"
+        "badge": "Available for new opportunities",
+        "role": "Web Designer & Developer",
+        "title_part1": "CREATIVE",
+        "title_part2": "DIGITAL SOLUTIONS",
+        "description": "Specializing in building high-impact, minimalist, accessible, and high-performance interfaces. Creating digital solutions for real-world problems.",
+        "cta_primary": "View projects",
+        "cta_secondary": "Let's talk"
     },
     "Projects": {
-        "title": "我的项目",
-        "subtitle": "我最近的作品展示，融合了设计与开发的精华。",
-        "view_project": "查看项目",
+        "title": "My Projects",
+        "subtitle": "A showcase of my most recent work, featuring the best in design and development.",
+        "view_project": "View Project",
         "items": {
             "p1": {
                 "title": "Pollnow",
-                "desc": "用于创建、管理和分析实时投票互动活动的平台。",
+                "desc": "Platform to create, manage, and analyze interactive events with real-time voting.",
                 "tag": "SaaS / Web"
             },
             "p2": {
                 "title": "TCG Shop Finder",
-                "desc": "查找西班牙全国集换式卡牌商店的平台。具有高级搜索和过滤功能。",
+                "desc": "Platform to locate trading card shops across Spain. Search and advanced filters.",
                 "tag": "SaaS / Web"
             },
             "p3": {
                 "title": "Arandor",
-                "desc": "基于纯 JavaScript 开发的经典终端 RPG 游戏。拥有多个版本和完整的背景故事。",
-                "tag": "Web / 游戏"
+                "desc": "A classic terminal RPG game developed with pure JavaScript. Features multiple versions and a complete lore.",
+                "tag": "Web / Game"
             },
             "p4": {
                 "title": "Chaotic Loom",
-                "desc": "我正作为设计师和前端开发人员积极参与此项目。",
-                "tag": "Web / 设计"
+                "desc": "I am actively collaborating on this project as a designer and Frontend Developer.",
+                "tag": "Web / Design"
             },
             "p5": {
                 "title": "TCG Live Arena",
-                "desc": "为 Pokémon TCG Live 卡牌游戏组织在线锦标赛和对战的定制平台。",
+                "desc": "A custom platform to organize online tournaments and battles for the Pokémon TCG Live card game.",
                 "tag": "SaaS / Web"
             }
         },
         "cursorText": {
-            "p1": "查看",
-            "p2": "查看",
-            "p3": "查看",
-            "p4": "查看",
-            "p5": "查看"
+            "p1": "View",
+            "p2": "View",
+            "p3": "View",
+            "p4": "View",
+            "p5": "View"
         }
     },
     "Services": {
-        "title": "服务",
-        "subtitle": "针对现实问题的数字解决方案。",
+        "title": "Services",
+        "subtitle": "Digital solutions for real-world problems.",
         "list": {
             "dev": {
-                "title": "网页开发",
-                "description": "使用 Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, PostgreSQL 构建的超快网站。可扩展且优化的代码。"
+                "title": "Web Development",
+                "description": "High-speed websites built with Next.js, React, TypeScript/JavaScript, Tailwind CSS, Prisma, and PostgreSQL. Scalable and optimized code."
             },
             "design": {
-                "title": "UI/UX 设计",
-                "description": "直观且极简的界面，优先考虑用户体验和品牌形象。"
+                "title": "UI/UX Design",
+                "description": "Intuitive and minimalist interfaces that prioritize user experience and brand identity."
             },
             "motion": {
-                "title": "动态图形",
-                "description": "流畅的动画和令人满意的微交互，让您的产品栩栩如生。"
+                "title": "Motion Graphics",
+                "description": "Fluid animations and satisfying micro-interactions that bring your product to life while increasing user retention."
             },
             "branding": {
-                "title": "数字身份",
-                "description": "创建连贯的视觉生态系统，从徽标到完整的风格指南。"
+                "title": "Digital Identity",
+                "description": "Creation of coherent visual ecosystems, from logos to complete style guides (for both individuals and companies)."
             }
         }
     },
     "Contact": {
-        "title": "联系我",
-        "subtitle": "您是一家公司，还是只是有一个想要实现惊人想法的人？",
+        "title": "Let's talk",
+        "subtitle": "Are you a company or do you just have an amazing idea you'd like to bring to life?",
         "form": {
-            "name": "您的名字",
-            "email": "邮箱",
-            "message": "告诉我您的项目",
-            "send": "发送消息",
-            "sending": "发送中...",
-            "success": "消息已成功发送！"
+            "name": "Your name",
+            "email": "Email",
+            "message": "Tell me about your project",
+            "send": "Send message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!"
         },
         "info": {
-            "email": "邮箱",
-            "social": "社交媒体",
-            "location": "位置"
+            "email": "Email",
+            "social": "Socials",
+            "location": "Location"
         }
     },
     "Footer": {
-        "rights": "版权所有",
-        "cv": "下载 CV",
-        "cv_loading": "正在准备 PDF...",
-        "social": "连接"
+        "rights": "All rights reserved",
+        "cv": "Download CV",
+        "cv_loading": "Preparing PDF...",
+        "social": "Connect"
     },
     "Testimonials": {
-        "title": "客户",
-        "title_highlight": "评价",
-        "subtitle": "我更喜欢让与我合作过的人来评价。",
+        "title": "Client",
+        "title_highlight": "Reviews",
+        "subtitle": "I prefer to let those who have already worked with me do the talking.",
         "reviews": {
             "r1": {
                 "name": "Pablo",
-                "role": "El Rincón Crypto YouTube博主",
-                "text": "与 Rayelus 合作是一次极好的体验。他在品牌推广和视觉设计方面的工作显著提升了我的频道。"
+                "role": "YouTuber at El Rincón Crypto",
+                "text": "Working with Rayelus was a great experience. His work on branding and visual design significantly improved my channel; he was always proactive and professional."
             },
             "r2": {
                 "name": "Restonic4",
-                "role": "Chaotic Loom 创作者",
-                "text": "他在前端和设计方面的专业知识体现在他为我的项目创建的快速、干净且深思熟虑的界面中。"
+                "role": "Creator of Chaotic Loom",
+                "text": "His expertise in frontend and design is evident in the fast, clean, and well-thought-out interfaces he created for my project. He knew how to turn ideas into a real, attractive product."
             },
             "r3": {
                 "name": "David Carmona",
-                "role": "TCG Shop Finder CEO",
-                "text": "一位非常棒的朋友和专业人士，与他共事非常愉快。他在网页开发尤其是设计方面的技能让我们的网站与众不同。"
+                "role": "CEO of TCG Shop Finder",
+                "text": "A great friend and professional who is a pleasure to work with. His skills in web development and especially in design made all the difference on our website."
             },
             "r4": {
                 "name": "Laura",
-                "role": "TCG Live Arena 合伙人",
-                "text": "他在几天内就创建了一个原型，并完美地捕捉到了我们脑海中的想法。"
+                "role": "Partner at TCG Live Arena",
+                "text": "He created a prototype in a matter of days and perfectly captured the idea we had in mind. Additionally, he designed interfaces and animations inspired by Liquid Glass design."
             }
         }
     },
     "About": {
-        "title_part1": "具有",
-        "title_part2": "意义的软件",
-        "bio_p1": "我从14岁开始编程，从那时起我就没有停止过构建、学习、失败，最重要的是改进。我创造<strong class='text-foreground'>坚实的数字产品</strong>，其中<em class='italic text-brand-primary'>工程</em>和<em class='italic text-brand-primary'>设计</em>共存。",
-        "bio_p2": "我与信任我的判断和成果质量的客户合作。",
+        "title_part1": "Software",
+        "title_part2": "with Purpose",
+        "bio_p1": "I started programming at 14 and since then I haven't stopped building, learning, failing, and above all, improving. I create <strong class='text-foreground'>solid digital products</strong> where <em class='italic text-brand-primary'>engineering</em> and <em class='italic text-brand-primary'>design</em> coexist.",
+        "bio_p2": "I work with clients who trust my judgment and the quality of my results.",
         "stats": {
-            "base_label": "基地",
-            "base_value": "全球 / 远程",
-            "exp_label": "经验",
-            "exp_value": "+5 年",
-            "stack_title": "技术栈 & 技能",
-            "dev_since": "由 2020 开始开发"
+            "base_label": "Base",
+            "base_value": "Global / Remote",
+            "exp_label": "Experience",
+            "exp_value": "5+ Years",
+            "stack_title": "TECH STACK & SKILLS",
+            "dev_since": "DEVELOPER SINCE 2020"
         }
     },
     "Projects_Extras": {
-        "search_placeholder": "搜索项目...",
-        "filter_all": "全部",
-        "page_jump": "跳转到",
-        "page_info": "页",
-        "no_results_title": "未找到项目",
-        "clear_filters": "清除筛选"
+        "search_placeholder": "Search projects...",
+        "filter_all": "All",
+        "page_jump": "Go to",
+        "page_info": "PAGE",
+        "no_results_title": "No projects found",
+        "clear_filters": "Clear Filters"
     },
     "Contact_Extras": {
-        "location_value": "塞维利亚，西班牙",
+        "location_value": "Seville, Spain",
         "placeholders": {
-            "name": "您的名字",
+            "name": "Your name",
             "email": "example@email.com",
-            "message": "我有一个想法..."
+            "message": "I have an idea for..."
         }
     },
     "Thanks": {
-        "title": "消息已发送！",
-        "message": "感谢您的联系。我会尽快回复您。",
-        "button": "返回首页"
+        "title": "Message Sent!",
+        "message": "Thank you for reaching out. I'll get back to you as soon as possible.",
+        "button": "Back to Home"
     },
     "NotFound": {
         "title": "404",
-        "description": "页面未找到。您正在寻找的 URL 不存在。",
-        "button": "返回首页"
+        "description": "Page not found. The URL you are looking for does not exist.",
+        "button": "Back to Home"
+    },
+    "ServicesPage": {
+        "badge": "Services Marketplace",
+        "title_prefix": "Digital Solutions",
+        "title_highlight": "Tailored for You",
+        "description": "Find the service that best suits you, compare plans, and find the perfect solution to take your project to the next level.",
+        "search_placeholder": "Search service (e.g. Landing, Shop...)",
+        "filter_all": "All",
+        "no_results": "No services found",
+        "clear_filters": "Clear filters"
     }
 }

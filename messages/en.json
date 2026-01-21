@@ -165,5 +165,15 @@
         "title": "404",
         "description": "Page not found. The URL you are looking for does not exist.",
         "button": "Back to Home"
+    },
+    "ServicesPage": {
+        "badge": "Services Marketplace",
+        "title_prefix": "Digital Solutions",
+        "title_highlight": "Tailored for You",
+        "description": "Find the service that best suits you, compare plans, and find the perfect solution to take your project to the next level.",
+        "search_placeholder": "Search service (e.g. Landing, Shop...)",
+        "filter_all": "All",
+        "no_results": "No services found",
+        "clear_filters": "Clear filters"
     }
 }

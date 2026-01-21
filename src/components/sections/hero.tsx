@@ -6,12 +6,17 @@ import { ArrowUpRight, Sparkles, Download } from "lucide-react";
 import { TextReveal } from "../motion/text-reveal";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { TailChase } from 'ldrs/react';
+import 'ldrs/react/TailChase.css';
 
 export function Hero() {
     const t = useTranslations("Hero");
     const tcv = useTranslations("Footer");
     const locale = useLocale();
+    const router = useRouter();
     const [isDownloading, setIsDownloading] = useState(false);
+    const [isLoadingServices, setIsLoadingServices] = useState(false);
 
     const handleDownloadCV = () => {
         setIsDownloading(true);
@@ -20,6 +25,11 @@ export function Hero() {
             setIsDownloading(false);
             window.open(`/cv/${locale}/Rayelus_CV_(${locale.toUpperCase()}).pdf`, "_blank");
         }, 1500);
+    };
+
+    const handleExploreServices = () => {
+        setIsLoadingServices(true);
+        router.push(`/${locale}/services`);
     };
 
     return (
@@ -77,6 +87,25 @@ export function Hero() {
                 >
 
                     <button
+                        onClick={handleExploreServices}
+                        disabled={isLoadingServices}
+                        className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-primary/10 text-brand-primary rounded-full hover:bg-brand-primary hover:text-white transition-all overflow-hidden backdrop-blur-[4px] border-2 border-brand-primary/20 min-w-[250px]"
+                    >
+                        {isLoadingServices ? (
+                            <TailChase
+                                size="24"
+                                speed="1.75"
+                                color="currentColor"
+                            />
+                        ) : (
+                            <>
+                                <span className="font-bold relative z-10">Explorar Servicios</span>
+                                <span className="absolute inset-0 bg-brand-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out" />
+                            </>
+                        )}
+                    </button>
+
+                    <button
                         onClick={handleDownloadCV}
                         disabled={isDownloading}
                         className="group relative flex items-center gap-3 px-8 py-3 bg-foreground rounded-full text-background font-bold overflow-hidden transition-all hover:bg-brand-primary hover:text-white"
@@ -89,16 +118,16 @@ export function Hero() {
                     {/* Boton de contacto lleva a la seccion contact */}
 
 
-                    <a
+                    {/* <a
                         href="#contact"
                         onClick={(e) => {
                             e.preventDefault();
                             document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                         }}
-                        className="px-8 py-4 border border-foreground/10 rounded-full backdrop-blur-[4px] font-bold hover:bg-surface-100 transition-colors"
+                        className="px-8 py-4 border-2 border-foreground/10 rounded-full backdrop-blur-[4px] font-bold hover:bg-surface-100 transition-colors"
                     >
                         {t("cta_secondary")}
-                    </a>
+                    </a> */}
                 </motion.div>
             </div>
 

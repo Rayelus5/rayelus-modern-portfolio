@@ -8,15 +8,17 @@ import { contactSchema, ContactFormData } from "@/utils/validators/contact";
 import { Send, Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import { Ring2 } from 'ldrs/react'
+import { TailChase } from 'ldrs/react'
+import 'ldrs/react/TailChase.css';
 
 export function Contact() {
     const t = useTranslations("Contact");
     const tExtras = useTranslations("Contact_Extras");
     const locale = useLocale();
     const [redirectUrl, setRedirectUrl] = useState("");
+    const [isSending, setIsSending] = useState(false);
 
-    const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<ContactFormData>({
+    const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>({
         resolver: zodResolver(contactSchema),
     });
 
@@ -28,7 +30,11 @@ export function Contact() {
 
     const onSubmit = (data: ContactFormData, e?: React.BaseSyntheticEvent) => {
         if (e) {
-            e.target.submit();
+            setIsSending(true);
+            // Small delay to ensure state update renders before native submit takes over
+            setTimeout(() => {
+                e.target.submit();
+            }, 50);
         }
     };
 
@@ -116,17 +122,14 @@ export function Contact() {
                         </div>
 
                         <button
-                            disabled={isSubmitting}
+                            disabled={isSending}
                             className="group w-full bg-brand-primary text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 hover:bg-brand-deep transition-all active:scale-[0.98] h-[64px]"
                             data-cursor={t("form.send").toUpperCase().split(" ")[0]}
                         >
-                            {isSubmitting ? (
-                                <Ring2
-                                    size={40}
-                                    stroke={5}
-                                    strokeLength={0.25}
-                                    bgOpacity={0.1}
-                                    speed={0.8}
+                            {isSending ? (
+                                <TailChase
+                                    size="30"
+                                    speed="1.75"
                                     color="white"
                                 />
                             ) : (

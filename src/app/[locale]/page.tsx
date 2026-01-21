@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Añadimos los IDs para el scroll */}
-      <ScrollReveal id="home" className="w-full max-w-8xl mx-auto" delay={1.8}><Hero /></ScrollReveal>
+      <ScrollReveal id="home" className="w-full max-w-8xl mx-auto" delay={0.7}><Hero /></ScrollReveal>
       <ScrollReveal id="about" className="w-full max-w-8xl mx-auto"><About /></ScrollReveal>
       <ScrollReveal id="projects" className="w-full max-w-7xl mx-auto"><Projects /></ScrollReveal>
       <div id="services" className="w-full"><Services /></div>
