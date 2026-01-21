@@ -89,7 +89,7 @@ export function Hero() {
                     <button
                         onClick={handleExploreServices}
                         disabled={isLoadingServices}
-                        className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-primary/10 text-brand-primary rounded-full hover:bg-brand-primary hover:text-white transition-all overflow-hidden backdrop-blur-[4px] border-2 border-brand-primary/20 min-w-[250px]"
+                        className="group relative inline-flex items-center justify-center gap-3 px-8 py-3 bg-brand-primary/10 text-brand-primary rounded-full hover:bg-brand-primary hover:text-white transition-all overflow-hidden backdrop-blur-[4px] border-2 border-brand-primary/20 min-w-[250px]"
                     >
                         {isLoadingServices ? (
                             <TailChase
