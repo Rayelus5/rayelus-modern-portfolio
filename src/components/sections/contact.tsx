@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 
 import { TailChase } from 'ldrs/react'
 import 'ldrs/react/TailChase.css';
+import Link from "next/link";
 
 export function Contact() {
     const t = useTranslations("Contact");
@@ -54,25 +55,50 @@ export function Contact() {
                     </div>
 
                     <div className="space-y-8">
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
-                                <Mail size={20} />
+                        <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 w-full">
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                                    <Mail size={20} />
+                                </div>
+                                <div>
+                                    <p className="text-xs font-mono uppercase text-brand-soft/60">{t("info.email")}</p>
+                                    <p className="text-lg font-medium">rayelus@proton.me</p>
+                                </div>
                             </div>
-                            <div>
-                                <p className="text-xs font-mono uppercase text-brand-soft/60">{t("info.email")}</p>
-                                <p className="text-lg font-medium">rayelus@proton.me</p>
+
+                            <div className="flex items-center gap-4">
+                                <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                                    <MapPin size={20} />
+                                </div>
+                                <div>
+                                    <p className="text-xs font-mono uppercase text-brand-soft/60">{t("info.location")}</p>
+                                    <p className="text-lg font-medium">{tExtras("location_value")}</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
-                                <MapPin size={20} />
-                            </div>
-                            <div>
-                                <p className="text-xs font-mono uppercase text-brand-soft/60">{t("info.location")}</p>
-                                <p className="text-lg font-medium">{tExtras("location_value")}</p>
-                            </div>
+                        <div className="flex gap-4 w-full">
+                            <Link href="https://github.com/Rayelus5" target="_blank" className="flex items-center gap-4 border-2 border-brand-primary/20 rounded-2xl p-4 hover:border-brand-primary transition-colors w-full">
+                                <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                                    <Github size={20} />
+                                </div>
+                                <div>
+                                    <p className="text-xs font-mono uppercase text-brand-soft/60">Github</p>
+                                    <p className="text-lg font-medium">Rayelus5</p>
+                                </div>
+                            </Link>
+
+                            <Link href="https://linkedin.com/in/rayelus" target="_blank" className="flex items-center gap-4 border-2 border-brand-primary/20 rounded-2xl p-4 hover:border-brand-primary transition-colors w-full">
+                                <div className="w-12 h-12 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                                    <Linkedin size={20} />
+                                </div>
+                                <div>
+                                    <p className="text-xs font-mono uppercase text-brand-soft/60">Linkedin</p>
+                                    <p className="text-lg font-medium">Rayelus</p>
+                                </div>
+                            </Link>
                         </div>
+
                     </div>
                 </div>
 
@@ -142,6 +168,6 @@ export function Contact() {
                     </form>
                 </motion.div>
             </div>
-        </section>
+        </section >
     );
 }

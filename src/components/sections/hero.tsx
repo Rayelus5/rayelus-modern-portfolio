@@ -95,7 +95,7 @@ export function Hero() {
                             <TailChase
                                 size="24"
                                 speed="1.75"
-                                color="currentColor"
+                                color="currentColor"    
                             />
                         ) : (
                             <>
